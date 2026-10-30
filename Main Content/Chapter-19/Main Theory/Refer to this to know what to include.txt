@@ -1,0 +1,23 @@
+
+
+The developed material must include:
+
+· Explanations: Accurate, beginner-friendly explanations of the main concepts.
+
+· Terminology: Definitions of unfamiliar terms when they first appear.
+
+· A worked example or demonstration: A step-by-step illustration showing how an idea works.
+
+· A meaningful visual where useful: A diagram, table, annotated image, or other visual that helps explain the content.
+
+· A learner activity or application question: Something that requires learners to use the idea.
+
+· An answer or expected outcome: An explanation that allows the learner and teacher to check understanding.
+
+· References: Identifiable sources supporting the content and any borrowed material.
+
+Use headings, lists, tables, images, and code blocks appropriately. Prioritize clear content and organization over decorative formatting.
+
+Do not simply paste textbook passages, previous students’ work, or AI output into Markdown. Check the material, organize it for your learners, and be prepared to explain it.
+
+A teammate will review your work after this is done.
