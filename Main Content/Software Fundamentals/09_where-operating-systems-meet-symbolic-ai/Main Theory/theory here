@@ -1,0 +1,57 @@
+## 1.1 What Is an Operating System (OS)?
+ 
+> **Big idea:** An operating system is the manager that sits between you (and your programs) and the computer's hardware.
+ 
+Without an OS, every program would have to know how to talk to the screen, keyboard, disk, and memory directly. The OS does that work once so programs don't have to.
+ 
+**Everyday analogy:** An OS is like a restaurant manager. Customers (programs) place orders, and the manager coordinates the kitchen (CPU), storage room (memory), and supplies (devices) so everyone gets served fairly.
+ 
+**Examples:** Windows, macOS, Linux, Android, iOS.
+
+ ## 1.2 What Does an OS Do?
+ 
+| Job | Plain-English meaning |
+|---|---|
+| **Process management** | Decides which program uses the CPU and when |
+| **Memory management** | Gives each program its own space in RAM and keeps them from interfering |
+| **File management** | Organizes data into files and folders on storage |
+| **Device management** | Controls hardware like printers, keyboards, and screens through drivers |
+| **Security & access** | Controls who can use what (logins, permissions) |
+| **User interface** | Lets you interact, via a GUI (windows and icons) or a command line |
+
+## 1.3 Key Terms
+ 
+- **Kernel:** The core part of the OS that has full control of the hardware.
+- **Process:** A program that is currently running.
+- **Thread:** A smaller unit of work inside a process. One process can have several threads.
+- **Multitasking:** Running several programs seemingly at the same time by switching between them very quickly.
+- **Scheduling:** The OS deciding the order in which processes get CPU time.
+- **Virtual memory:** Using disk space to act like extra RAM when memory runs low.
+- **Driver:** Software that lets the OS communicate with a specific piece of hardware.
+- **GUI vs. CLI:** Graphical interface (click things) vs. command-line interface (type commands).
+
+## 1.4 What Is Symbolic AI?
+ 
+> **Big idea:** Symbolic AI makes computers "think" using explicit rules and symbols that humans write, rather than learning patterns from lots of data.
+ 
+**Example rule:** `IF patient has fever AND cough THEN suspect flu`
+ 
+**Core components:**
+ 
+- **Knowledge base:** A collection of facts and rules about a topic.
+- **Inference engine:** The part that applies the rules to the facts to reach conclusions.
+- **Expert systems:** Programs that copy the decision-making of a human expert, such as in medical diagnosis.
+**Strengths:** Easy to explain *why* it gave an answer; precise and predictable.
+**Weaknesses:** Someone has to write every rule by hand; struggles with messy, real-world situations.
+ 
+**Compare with modern (machine learning) AI:**
+ 
+| | Symbolic AI | Machine learning |
+|---|---|---|
+| Knowledge comes from | Human-written rules | Patterns learned from data |
+| Explainable? | Usually yes | Often hard to explain |
+| Handles messy data? | Poorly | Well |
+
+## 1.5 Where the Two Meet
+
+Operating systems can use symbolic, rule-based techniques for decisions such as scheduling and resource allocation (for example, rules like "give interactive programs priority over background tasks").Rule-based AI systems also run *on top of* an OS, relying on it for memory, files, and CPU time.
