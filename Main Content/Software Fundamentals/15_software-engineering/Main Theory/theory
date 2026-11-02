@@ -1,0 +1,49 @@
+## 3.1 What Is Software Engineering?
+ 
+> **Big idea:** Software engineering is the disciplined, teamwork-based way of designing, building, testing, and maintaining software so that it is dependable and affordable to change.
+ 
+**Analogy:** Programming is like cooking a meal for yourself. Software engineering is like running a restaurant kitchen: you need a plan, a team, quality checks, and a process that works every day.
+ 
+## 3.2 The Software Development Life Cycle (SDLC)
+ 
+Every project moves through roughly these stages:
+ 
+1. **Requirements:** Find out what users actually need.
+2. **Design:** Plan how the software will be structured.
+3. **Implementation:** Write the code.
+4. **Testing:** Check that it works and find bugs.
+5. **Deployment:** Release it to users.
+6. **Maintenance:** Fix problems and add improvements over time.
+## 3.3 Development Models
+ 
+| Model | How it works | Best when |
+|---|---|---|
+| **Waterfall** | Finish each stage completely before starting the next | Requirements are clear and won't change |
+| **Agile** | Build in short cycles (sprints), get feedback, and adjust | Requirements change or are uncertain |
+| **Iterative / Incremental** | Build the software in repeating rounds, adding more each time | You want working versions early |
+ 
+**Agile in one line:** Build a little, show it, learn, improve, repeat.
+ 
+## 3.4 Testing
+ 
+- **Unit testing:** Tests small individual pieces of code.
+- **Integration testing:** Tests that the pieces work together.
+- **System testing:** Tests the whole program.
+- **Acceptance testing:** Users or clients confirm it meets their needs.
+- **Regression testing:** Re-tests after changes to make sure nothing old broke.
+## 3.5 Version Control
+ 
+Version control tracks every change to your code, lets teams work together without overwriting each other, and lets you go back to older versions.
+ 
+- **Git** is the most common tool. **GitHub** is a website that hosts Git projects (like the repository in your screenshot).
+- Basic terms: **repository** (project storage), **commit** (a saved snapshot of changes), **branch** (a separate line of work), **merge** (combining branches).
+## 3.6 Good Design Principles
+ 
+- **Modularity:** Break the system into small, separate parts.
+- **Abstraction:** Hide complicated details behind a simple interface.
+- **DRY (Don't Repeat Yourself):** Avoid duplicating code or logic.
+- **Separation of concerns:** Each part should have one clear job.
+- **Documentation:** Write down how things work so others can follow.
+## 3.7 Teamwork and Roles
+ 
+Common roles include **product owner/manager** (decides what to build), **developer** (writes code), **tester/QA** (checks quality), **designer** (user experience), and **project manager** (keeps work on track).
