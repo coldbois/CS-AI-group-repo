@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="900" height="360" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="m15803d" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#15803d"/></marker><marker id="s15803d" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#15803d"/></marker><marker id="m7c3aed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="s7c3aed" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#7c3aed"/></marker><marker id="mb45309" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#b45309"/></marker><marker id="sb45309" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#b45309"/></marker></defs>
+  <rect width="900" height="360" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="22" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">How a query travels</text>
+  <text x="450.0" y="60" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Programs never touch the stored files directly</text>
+  <rect x="30" y="120" width="170" height="100" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="115.0" y="165.875" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold"><tspan x="115.0" dy="0">App or website</tspan><tspan x="115.0" dy="18.75">(you)</tspan></text>
+  <rect x="330" y="90" width="240" height="160" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="450.0" y="133.925" font-size="13" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif"><tspan x="450.0" dy="0">DBMS</tspan><tspan x="450.0" dy="16.25">1. understand the query</tspan><tspan x="450.0" dy="16.25">2. check permissions &amp; rules</tspan><tspan x="450.0" dy="16.25">3. find the rows</tspan><tspan x="450.0" dy="16.25">(using indexes)</tspan><tspan x="450.0" dy="16.25">4. handle other users</tspan></text>
+  <path d="M700,117 L700,223 A80.0,12 0 0 0 860,223 L860,117" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <ellipse cx="780.0" cy="117" rx="80.0" ry="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="780.0" y="182.0" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold"><tspan x="780.0" dy="0">Stored</tspan><tspan x="780.0" dy="18.75">data</tspan></text>
+  <path d="M202,145 L326,145" fill="none" stroke="#b45309" stroke-width="2.5" marker-end="url(#mb45309)"/>
+  <text x="264" y="135" font-size="13" fill="#b45309" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">SQL query</text>
+  <text x="264" y="168" font-size="11" fill="#6b7280" text-anchor="middle" font-family="Consolas, monospace">SELECT …</text>
+  <path d="M572,150 L696,150" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#m7c3aed)"/>
+  <path d="M696,195 L572,195" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#m7c3aed)"/>
+  <text x="634" y="140" font-size="12" fill="#7c3aed" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">read/write</text>
+  <path d="M326,200 L202,200" fill="none" stroke="#15803d" stroke-width="2.5" marker-end="url(#m15803d)"/>
+  <text x="264" y="220" font-size="13" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">result table</text>
+  <text x="450" y="300" font-size="15" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">The DBMS is like a librarian: you ask for what you want; it fetches it safely.</text>
+</svg>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="m15803d" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#15803d"/></marker><marker id="s15803d" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#15803d"/></marker></defs>
+  <rect width="900" height="560" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="22" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Normalisation: store each fact once</text>
+  <text x="450" y="72" font-size="16" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Before: one big table with repeated data</text>
+  <rect x="120" y="85" width="550" height="30" rx="4" fill="#b91c1c"/>
+  <text x="395.0" y="105" font-size="15" fill="#ffffff" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Everything</text>
+  <rect x="120" y="115" width="550" height="30" rx="0" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="128" y="135.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">student</text>
+  <text x="208" y="135.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">email</text>
+  <text x="338" y="135.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">course</text>
+  <text x="528" y="135.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">credits</text>
+  <text x="608" y="135.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">grade</text>
+  <rect x="120" y="145" width="550" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="128" y="165.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Ana</text>
+  <text x="208" y="165.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">ana@uni.edu</text>
+  <text x="338" y="165.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Intro to Programming</text>
+  <text x="528" y="165.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">4</text>
+  <text x="608" y="165.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">A</text>
+  <rect x="120" y="175" width="550" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="128" y="195.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Ana</text>
+  <text x="208" y="195.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">ana@uni.edu</text>
+  <text x="338" y="195.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Symbolic AI</text>
+  <text x="528" y="195.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">3</text>
+  <text x="608" y="195.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">B</text>
+  <rect x="120" y="205" width="550" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="128" y="225.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Ben</text>
+  <text x="208" y="225.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">ben@uni.edu</text>
+  <text x="338" y="225.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Intro to Programming</text>
+  <text x="528" y="225.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">4</text>
+  <text x="608" y="225.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">C</text>
+  <rect x="200" y="145" width="130" height="60" rx="0" fill="#fee2e2" fill-opacity="0.4" stroke="#b91c1c" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="330" y="145" width="270" height="30" rx="0" fill="#fee2e2" fill-opacity="0.4" stroke="#b91c1c" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="330" y="205" width="270" height="30" rx="0" fill="#fee2e2" fill-opacity="0.4" stroke="#b91c1c" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="680" y="175" font-size="12" fill="#b91c1c" text-anchor="start" font-family="Segoe UI, Arial, sans-serif"><tspan x="680" dy="0">Ana&#x27;s email</tspan><tspan x="680" dy="15.0">stored twice</tspan></text>
+  <text x="680" y="215" font-size="12" fill="#b91c1c" text-anchor="start" font-family="Segoe UI, Arial, sans-serif"><tspan x="680" dy="0">course info</tspan><tspan x="680" dy="15.0">stored twice</tspan></text>
+  <text x="450" y="268" font-size="13" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">Change Ana&#x27;s email in one row but not the other → the data contradicts itself</text>
+  <path d="M450,280 L450,318" fill="none" stroke="#15803d" stroke-width="3" marker-end="url(#m15803d)"/>
+  <text x="465" y="305" font-size="14" fill="#15803d" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">split into tables + link with keys</text>
+  <text x="450" y="340" font-size="16" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">After: three tables, every fact stored in exactly one place</text>
+  <rect x="20" y="355" width="220" height="30" rx="4" fill="#1d4ed8"/>
+  <text x="130.0" y="375" font-size="15" fill="#ffffff" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Students</text>
+  <rect x="20" y="385" width="220" height="30" rx="0" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="28" y="405.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">id</text>
+  <text x="68" y="405.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">name</text>
+  <text x="128" y="405.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">email</text>
+  <rect x="20" y="415" width="220" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="28" y="435.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">1</text>
+  <text x="68" y="435.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Ana</text>
+  <text x="128" y="435.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">ana@uni.edu</text>
+  <rect x="20" y="445" width="220" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="28" y="465.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">2</text>
+  <text x="68" y="465.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Ben</text>
+  <text x="128" y="465.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">ben@uni.edu</text>
+  <rect x="270" y="355" width="245" height="30" rx="4" fill="#7c3aed"/>
+  <text x="392.5" y="375" font-size="15" fill="#ffffff" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Enrolments</text>
+  <rect x="270" y="385" width="245" height="30" rx="0" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="278" y="405.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">student_id</text>
+  <text x="373" y="405.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">course_id</text>
+  <text x="463" y="405.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">grade</text>
+  <rect x="270" y="415" width="245" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="278" y="435.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">1</text>
+  <text x="373" y="435.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">CS101</text>
+  <text x="463" y="435.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">A</text>
+  <rect x="270" y="445" width="245" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="278" y="465.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">1</text>
+  <text x="373" y="465.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">AI150</text>
+  <text x="463" y="465.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">B</text>
+  <rect x="270" y="475" width="245" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="278" y="495.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">2</text>
+  <text x="373" y="495.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">CS101</text>
+  <text x="463" y="495.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">C</text>
+  <rect x="545" y="355" width="335" height="30" rx="4" fill="#b45309"/>
+  <text x="712.5" y="375" font-size="15" fill="#ffffff" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Courses</text>
+  <rect x="545" y="385" width="335" height="30" rx="0" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="553" y="405.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">course_id</text>
+  <text x="643" y="405.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">title</text>
+  <text x="808" y="405.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">credits</text>
+  <rect x="545" y="415" width="335" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="553" y="435.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">CS101</text>
+  <text x="643" y="435.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Intro to Prog.</text>
+  <text x="808" y="435.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">4</text>
+  <rect x="545" y="445" width="335" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="553" y="465.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">AI150</text>
+  <text x="643" y="465.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Symbolic AI</text>
+  <text x="808" y="465.0" font-size="14" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">3</text>
+  <text x="450" y="530" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Now Ana&#x27;s email lives in one cell. Change it once and it is correct everywhere.</text>
+</svg>

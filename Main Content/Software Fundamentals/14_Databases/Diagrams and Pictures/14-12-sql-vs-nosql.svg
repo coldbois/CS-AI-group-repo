@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="mb45309" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#b45309"/></marker><marker id="sb45309" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#b45309"/></marker></defs>
+  <rect width="900" height="450" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="22" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Four ways to shape data</text>
+  <text x="450.0" y="60" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Relational (SQL) uses tables; NoSQL databases use other shapes</text>
+  <rect x="20" y="75" width="205" height="330" rx="12" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="122" y="102" font-size="16" fill="#1d4ed8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Relational table</text>
+  <text x="122" y="392" font-size="12" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">MySQL, PostgreSQL, SQLite</text>
+  <rect x="240" y="75" width="205" height="330" rx="12" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+  <text x="342" y="102" font-size="16" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Document</text>
+  <text x="342" y="392" font-size="12" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">MongoDB</text>
+  <rect x="460" y="75" width="205" height="330" rx="12" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+  <text x="562" y="102" font-size="16" fill="#b45309" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Key–value</text>
+  <text x="562" y="392" font-size="12" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">Redis</text>
+  <rect x="680" y="75" width="205" height="330" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="782" y="102" font-size="16" fill="#7c3aed" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Graph</text>
+  <text x="782" y="392" font-size="12" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">Neo4j</text>
+  <rect x="32" y="125" width="180" height="30" rx="4" fill="#1d4ed8"/>
+  <text x="122.0" y="145" font-size="15" fill="#ffffff" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Students</text>
+  <rect x="32" y="155" width="180" height="30" rx="0" fill="#f3f4f6" stroke="#d1d5db" stroke-width="1"/>
+  <text x="40" y="175.0" font-size="13" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">id</text>
+  <text x="80" y="175.0" font-size="13" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">name</text>
+  <text x="160" y="175.0" font-size="13" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">year</text>
+  <rect x="32" y="185" width="180" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="40" y="205.0" font-size="13" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">1</text>
+  <text x="80" y="205.0" font-size="13" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Ana</text>
+  <text x="160" y="205.0" font-size="13" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">1</text>
+  <rect x="32" y="215" width="180" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="40" y="235.0" font-size="13" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">2</text>
+  <text x="80" y="235.0" font-size="13" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Ben</text>
+  <text x="160" y="235.0" font-size="13" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">2</text>
+  <rect x="32" y="245" width="180" height="30" rx="0" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <text x="40" y="265.0" font-size="13" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">3</text>
+  <text x="80" y="265.0" font-size="13" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Cho</text>
+  <text x="160" y="265.0" font-size="13" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">1</text>
+  <rect x="252" y="120" width="185" height="250" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="2"/>
+  <text x="264" y="192.675" font-size="13" fill="#1f2937" text-anchor="start" font-family="Consolas, Menlo, monospace"><tspan x="264" dy="0">{</tspan><tspan x="264" dy="16.25">  &quot;id&quot;: 1,</tspan><tspan x="264" dy="16.25">  &quot;name&quot;: &quot;Ana&quot;,</tspan><tspan x="264" dy="16.25">  &quot;courses&quot;: [</tspan><tspan x="264" dy="16.25">    &quot;CS101&quot;,</tspan><tspan x="264" dy="16.25">    &quot;AI150&quot;</tspan><tspan x="264" dy="16.25">  ]</tspan><tspan x="264" dy="16.25">}</tspan></text>
+  <rect x="470" y="130" width="80" height="38" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+  <text x="510.0" y="153.2" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Consolas, Menlo, monospace">user:1</text>
+  <path d="M552,149 L574,149" fill="none" stroke="#b45309" stroke-width="2" marker-end="url(#mb45309)"/>
+  <rect x="576" y="130" width="80" height="38" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+  <text x="616.0" y="153.2" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Ana</text>
+  <rect x="470" y="185" width="80" height="38" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+  <text x="510.0" y="208.2" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Consolas, Menlo, monospace">user:2</text>
+  <path d="M552,204 L574,204" fill="none" stroke="#b45309" stroke-width="2" marker-end="url(#mb45309)"/>
+  <rect x="576" y="185" width="80" height="38" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+  <text x="616.0" y="208.2" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Ben</text>
+  <rect x="470" y="240" width="80" height="38" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+  <text x="510.0" y="263.2" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Consolas, Menlo, monospace">cart:1</text>
+  <path d="M552,259 L574,259" fill="none" stroke="#b45309" stroke-width="2" marker-end="url(#mb45309)"/>
+  <rect x="576" y="240" width="80" height="38" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+  <text x="616.0" y="263.2" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">3 items</text>
+  <rect x="470" y="295" width="80" height="38" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+  <text x="510.0" y="318.2" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Consolas, Menlo, monospace">theme:1</text>
+  <path d="M552,314 L574,314" fill="none" stroke="#b45309" stroke-width="2" marker-end="url(#mb45309)"/>
+  <rect x="576" y="295" width="80" height="38" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+  <text x="616.0" y="318.2" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">dark</text>
+  <line x1="730" y1="160" x2="825" y2="200" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="730" y1="160" x2="745" y2="290" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="745" y1="290" x2="825" y2="320" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="825" y1="200" x2="825" y2="320" stroke="#7c3aed" stroke-width="2"/>
+  <circle cx="730" cy="160" r="26" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="730" y="165" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Ana</text>
+  <circle cx="825" cy="200" r="26" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="825" y="205" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Ben</text>
+  <circle cx="745" cy="290" r="26" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="745" y="295" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Cho</text>
+  <circle cx="825" cy="320" r="26" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="825" y="325" font-size="12" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">AI150</text>
+  <text x="450" y="435" font-size="13" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Tables suit strict, connected data (banks, grades). NoSQL suits huge or varied data (feeds, carts).</text>
+</svg>

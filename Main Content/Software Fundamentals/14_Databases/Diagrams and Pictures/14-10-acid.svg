@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="900" height="360" font-family="Segoe UI, Arial, sans-serif">
+  <defs></defs>
+  <rect width="900" height="360" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="22" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">ACID: four promises a reliable database makes</text>
+  <rect x="25" y="70" width="200" height="270" rx="12" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="125" y="125" font-size="46" fill="#1d4ed8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">A</text>
+  <text x="125" y="155" font-size="17" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Atomicity</text>
+  <text x="125" y="185" font-size="13" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif"><tspan x="125" dy="0">All steps happen,</tspan><tspan x="125" dy="16.25">or none do.</tspan></text>
+  <line x1="45" y1="240" x2="205" y2="240" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="125" y="265" font-size="12" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic"><tspan x="125" dy="0">Like a vending machine:</tspan><tspan x="125" dy="15.0">you get the snack</tspan><tspan x="125" dy="15.0">or your money back.</tspan></text>
+  <rect x="243" y="70" width="200" height="270" rx="12" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="343" y="125" font-size="46" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">C</text>
+  <text x="343" y="155" font-size="17" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Consistency</text>
+  <text x="343" y="185" font-size="13" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif"><tspan x="343" dy="0">The database&#x27;s rules</tspan><tspan x="343" dy="16.25">are never broken.</tspan></text>
+  <line x1="263" y1="240" x2="423" y2="240" stroke="#15803d" stroke-width="1"/>
+  <text x="343" y="265" font-size="12" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic"><tspan x="343" dy="0">If the rule says</tspan><tspan x="343" dy="15.0">balance ≥ 0, no</tspan><tspan x="343" dy="15.0">transaction can break it.</tspan></text>
+  <rect x="461" y="70" width="200" height="270" rx="12" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="561" y="125" font-size="46" fill="#b45309" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">I</text>
+  <text x="561" y="155" font-size="17" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Isolation</text>
+  <text x="561" y="185" font-size="13" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif"><tspan x="561" dy="0">Transactions running</tspan><tspan x="561" dy="16.25">at once don&#x27;t see each</tspan><tspan x="561" dy="16.25">other&#x27;s half-done work.</tspan></text>
+  <line x1="481" y1="240" x2="641" y2="240" stroke="#b45309" stroke-width="1"/>
+  <text x="561" y="265" font-size="12" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic"><tspan x="561" dy="0">Like two cashiers</tspan><tspan x="561" dy="15.0">serving different</tspan><tspan x="561" dy="15.0">customers.</tspan></text>
+  <rect x="679" y="70" width="200" height="270" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="779" y="125" font-size="46" fill="#7c3aed" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">D</text>
+  <text x="779" y="155" font-size="17" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Durability</text>
+  <text x="779" y="185" font-size="13" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif"><tspan x="779" dy="0">Once committed,</tspan><tspan x="779" dy="16.25">it stays saved.</tspan></text>
+  <line x1="699" y1="240" x2="859" y2="240" stroke="#7c3aed" stroke-width="1"/>
+  <text x="779" y="265" font-size="12" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic"><tspan x="779" dy="0">Written in ink, not</tspan><tspan x="779" dy="15.0">pencil: survives a</tspan><tspan x="779" dy="15.0">power cut.</tspan></text>
+</svg>
