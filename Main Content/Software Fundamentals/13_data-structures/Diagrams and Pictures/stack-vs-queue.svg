@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="760" height="360" fill="#ffffff"/>
+  <!-- Stack -->
+  <text x="190" y="36" font-size="22" font-weight="bold" text-anchor="middle" fill="#1f2937">Stack — LIFO</text>
+  <text x="190" y="60" font-size="14" text-anchor="middle" fill="#6b7280">Last In, First Out (like plates)</text>
+  <g stroke="#1d4ed8" stroke-width="2">
+    <rect x="130" y="110" width="120" height="50" rx="6" fill="#dbeafe"/>
+    <rect x="130" y="165" width="120" height="50" rx="6" fill="#dbeafe"/>
+    <rect x="130" y="220" width="120" height="50" rx="6" fill="#dbeafe"/>
+  </g>
+  <g font-size="20" text-anchor="middle" fill="#1e3a8a">
+    <text x="190" y="142">C (newest)</text>
+    <text x="190" y="197">B</text>
+    <text x="190" y="252">A (oldest)</text>
+  </g>
+  <line x1="320" y1="135" x2="262" y2="135" stroke="#16a34a" stroke-width="3" marker-end="url(#g)"/>
+  <text x="262" y="112" font-size="15" fill="#16a34a">push / pop</text>
+  <text x="262" y="160" font-size="13" fill="#6b7280">top only</text>
+  <line x1="130" y1="292" x2="250" y2="292" stroke="#9ca3af" stroke-width="3"/>
+  <text x="190" y="320" font-size="14" text-anchor="middle" fill="#6b7280">Examples: Undo, browser Back</text>
+
+  <!-- Divider -->
+  <line x1="380" y1="30" x2="380" y2="330" stroke="#e5e7eb" stroke-width="2"/>
+
+  <!-- Queue -->
+  <text x="570" y="36" font-size="22" font-weight="bold" text-anchor="middle" fill="#1f2937">Queue — FIFO</text>
+  <text x="570" y="60" font-size="14" text-anchor="middle" fill="#6b7280">First In, First Out (like a line)</text>
+  <g stroke="#b45309" stroke-width="2">
+    <rect x="440" y="165" width="80" height="50" rx="6" fill="#fef3c7"/>
+    <rect x="530" y="165" width="80" height="50" rx="6" fill="#fef3c7"/>
+    <rect x="620" y="165" width="80" height="50" rx="6" fill="#fef3c7"/>
+  </g>
+  <g font-size="20" text-anchor="middle" fill="#78350f">
+    <text x="480" y="197">A</text>
+    <text x="570" y="197">B</text>
+    <text x="660" y="197">C</text>
+  </g>
+  <text x="480" y="240" font-size="13" text-anchor="middle" fill="#6b7280">front</text>
+  <text x="660" y="240" font-size="13" text-anchor="middle" fill="#6b7280">back</text>
+  <line x1="440" y1="130" x2="400" y2="130" stroke="#dc2626" stroke-width="3" marker-end="url(#r)"/>
+  <text x="440" y="120" font-size="15" fill="#dc2626">dequeue (leave)</text>
+  <line x1="740" y1="130" x2="705" y2="130" stroke="#16a34a" stroke-width="3" marker-end="url(#g)"/>
+  <text x="600" y="120" font-size="15" fill="#16a34a">enqueue (join)</text>
+  <text x="570" y="320" font-size="14" text-anchor="middle" fill="#6b7280">Examples: printer, canteen line, CPU waiting list</text>
+
+  <defs>
+    <marker id="g" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16a34a"/></marker>
+    <marker id="r" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/></marker>
+  </defs>
+</svg>
