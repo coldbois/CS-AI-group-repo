@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="mb91c1c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker><marker id="sb91c1c" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#b91c1c"/></marker></defs>
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="22" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Stack: push and pop at the top only</text>
+  <text x="450.0" y="60" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">LIFO: Last In, First Out</text>
+  <text x="95" y="96" font-size="17" fill="#15803d" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-weight="bold">push A</text>
+  <line x1="30" y1="352" x2="160" y2="352" stroke="#6b7280" stroke-width="4"/>
+  <rect x="45" y="302" width="100" height="46" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="95.0" y="331.3" font-size="18" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">A</text>
+  <text x="151" y="330" font-size="12" fill="#b45309" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">← top</text>
+  <text x="184" y="250" font-size="22" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">→</text>
+  <text x="273" y="96" font-size="17" fill="#15803d" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-weight="bold">push B</text>
+  <line x1="208" y1="352" x2="338" y2="352" stroke="#6b7280" stroke-width="4"/>
+  <rect x="223" y="302" width="100" height="46" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="273.0" y="331.3" font-size="18" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">A</text>
+  <rect x="223" y="248" width="100" height="46" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="273.0" y="277.3" font-size="18" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">B</text>
+  <text x="329" y="276" font-size="12" fill="#b45309" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">← top</text>
+  <text x="362" y="250" font-size="22" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">→</text>
+  <text x="451" y="96" font-size="17" fill="#15803d" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-weight="bold">push C</text>
+  <line x1="386" y1="352" x2="516" y2="352" stroke="#6b7280" stroke-width="4"/>
+  <rect x="401" y="302" width="100" height="46" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="451.0" y="331.3" font-size="18" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">A</text>
+  <rect x="401" y="248" width="100" height="46" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="451.0" y="277.3" font-size="18" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">B</text>
+  <rect x="401" y="194" width="100" height="46" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="451.0" y="223.3" font-size="18" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">C</text>
+  <text x="507" y="222" font-size="12" fill="#b45309" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">← top</text>
+  <text x="540" y="250" font-size="22" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">→</text>
+  <text x="629" y="96" font-size="17" fill="#b91c1c" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-weight="bold">pop</text>
+  <line x1="564" y1="352" x2="694" y2="352" stroke="#6b7280" stroke-width="4"/>
+  <rect x="579" y="302" width="100" height="46" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="629.0" y="331.3" font-size="18" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">A</text>
+  <rect x="579" y="248" width="100" height="46" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="629.0" y="277.3" font-size="18" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">B</text>
+  <text x="685" y="276" font-size="12" fill="#b45309" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">← top</text>
+  <rect x="589" y="112" width="80" height="40" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="629.0" y="137.6" font-size="16" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">C</text>
+  <path d="M629,185 L629,156" fill="none" stroke="#b91c1c" stroke-width="2.5" marker-end="url(#mb91c1c)"/>
+  <text x="718" y="250" font-size="22" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">→</text>
+  <text x="807" y="96" font-size="17" fill="#b91c1c" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-weight="bold">pop</text>
+  <line x1="742" y1="352" x2="872" y2="352" stroke="#6b7280" stroke-width="4"/>
+  <rect x="757" y="302" width="100" height="46" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="807.0" y="331.3" font-size="18" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">A</text>
+  <text x="863" y="330" font-size="12" fill="#b45309" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">← top</text>
+  <rect x="767" y="112" width="80" height="40" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="807.0" y="137.6" font-size="16" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">B</text>
+  <path d="M807,185 L807,156" fill="none" stroke="#b91c1c" stroke-width="2.5" marker-end="url(#mb91c1c)"/>
+  <text x="450" y="395" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">C went in last, so C comes out first. Used for Undo, the browser Back button and the call stack.</text>
+</svg>

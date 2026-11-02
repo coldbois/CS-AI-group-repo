@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" font-family="Segoe UI, Arial, sans-serif">
+  <defs></defs>
+  <rect width="900" height="480" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="22" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Graph: nodes connected by edges</text>
+  <text x="450.0" y="60" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Example: cities joined by roads</text>
+  <rect x="330" y="75" width="540" height="385" rx="16" fill="#eef6ee" stroke="#d1d5db" stroke-width="2"/>
+  <line x1="720" y1="370" x2="560" y2="130" stroke="#b45309" stroke-width="4"/>
+  <line x1="720" y1="370" x2="560" y2="400" stroke="#6b7280" stroke-width="3"/>
+  <line x1="560" y1="130" x2="700" y2="215" stroke="#b45309" stroke-width="4"/>
+  <line x1="700" y1="215" x2="720" y2="370" stroke="#b45309" stroke-width="4"/>
+  <line x1="560" y1="400" x2="400" y2="380" stroke="#6b7280" stroke-width="3"/>
+  <circle cx="560" cy="130" r="14" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+  <text x="560" y="108" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Astana</text>
+  <circle cx="700" cy="215" r="14" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+  <text x="700" y="193" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Karaganda</text>
+  <circle cx="720" cy="370" r="14" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+  <text x="720" y="348" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Almaty</text>
+  <circle cx="560" cy="400" r="14" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+  <text x="560" y="378" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Bishkek</text>
+  <circle cx="400" cy="380" r="14" fill="#dbeafe" stroke="#1d4ed8" stroke-width="3"/>
+  <text x="400" y="358" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Tashkent</text>
+  <text x="40" y="120" font-size="17" fill="#1d4ed8" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Node (vertex)</text>
+  <text x="40" y="144" font-size="14" fill="#6b7280" text-anchor="start" font-family="Segoe UI, Arial, sans-serif"><tspan x="40" dy="0">a thing: a city, a person,</tspan><tspan x="40" dy="17.5">a web page</tspan></text>
+  <text x="40" y="220" font-size="17" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Edge</text>
+  <text x="40" y="244" font-size="14" fill="#6b7280" text-anchor="start" font-family="Segoe UI, Arial, sans-serif"><tspan x="40" dy="0">a connection: a road,</tspan><tspan x="40" dy="17.5">a friendship, a link</tspan></text>
+  <text x="40" y="320" font-size="17" fill="#b45309" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Loop (cycle)</text>
+  <text x="40" y="344" font-size="14" fill="#6b7280" text-anchor="start" font-family="Segoe UI, Arial, sans-serif"><tspan x="40" dy="0">Almaty → Astana → Karaganda</tspan><tspan x="40" dy="17.5">→ back to Almaty.</tspan><tspan x="40" dy="17.5">Graphs allow loops; trees don&#x27;t.</tspan></text>
+  <text x="40" y="430" font-size="14" fill="#6b7280" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-style="italic"><tspan x="40" dy="0">No root, no levels: any node</tspan><tspan x="40" dy="17.5">can connect to any other.</tspan></text>
+</svg>

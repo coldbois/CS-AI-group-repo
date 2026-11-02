@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="m15803d" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#15803d"/></marker><marker id="s15803d" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#15803d"/></marker><marker id="mb91c1c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker><marker id="sb91c1c" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#b91c1c"/></marker></defs>
+  <rect width="900" height="600" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="22" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Which data structure should I use?</text>
+  <text x="450.0" y="60" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Ask: what will my program do most often?</text>
+  <rect x="40" y="85" width="520" height="48" rx="8" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="52" y="114.25" font-size="15" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Look things up instantly by a key (name, ID)?</text>
+  <path d="M562,109 L676,109" fill="none" stroke="#15803d" stroke-width="2" marker-end="url(#m15803d)"/>
+  <text x="618" y="102" font-size="13" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">yes</text>
+  <rect x="680" y="85" width="180" height="48" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="770.0" y="114.95" font-size="17" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Hash table</text>
+  <path d="M300,135 L300,149" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#mb91c1c)"/>
+  <text x="312" y="147" font-size="12" fill="#b91c1c" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">no</text>
+  <rect x="40" y="153" width="520" height="48" rx="8" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="52" y="182.25" font-size="15" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Handle the NEWEST item first?</text>
+  <path d="M562,177 L676,177" fill="none" stroke="#15803d" stroke-width="2" marker-end="url(#m15803d)"/>
+  <text x="618" y="170" font-size="13" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">yes</text>
+  <rect x="680" y="153" width="180" height="48" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="770.0" y="182.95" font-size="17" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Stack</text>
+  <path d="M300,203 L300,217" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#mb91c1c)"/>
+  <text x="312" y="215" font-size="12" fill="#b91c1c" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">no</text>
+  <rect x="40" y="221" width="520" height="48" rx="8" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="52" y="250.25" font-size="15" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Handle the OLDEST item first (arrival order)?</text>
+  <path d="M562,245 L676,245" fill="none" stroke="#15803d" stroke-width="2" marker-end="url(#m15803d)"/>
+  <text x="618" y="238" font-size="13" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">yes</text>
+  <rect x="680" y="221" width="180" height="48" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="770.0" y="250.95" font-size="17" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Queue</text>
+  <path d="M300,271 L300,285" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#mb91c1c)"/>
+  <text x="312" y="283" font-size="12" fill="#b91c1c" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">no</text>
+  <rect x="40" y="289" width="520" height="48" rx="8" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="52" y="318.25" font-size="15" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Data has levels (parent → child)?</text>
+  <path d="M562,313 L676,313" fill="none" stroke="#15803d" stroke-width="2" marker-end="url(#m15803d)"/>
+  <text x="618" y="306" font-size="13" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">yes</text>
+  <rect x="680" y="289" width="180" height="48" rx="8" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="770.0" y="318.95" font-size="17" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Tree</text>
+  <path d="M300,339 L300,353" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#mb91c1c)"/>
+  <text x="312" y="351" font-size="12" fill="#b91c1c" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">no</text>
+  <rect x="40" y="357" width="520" height="48" rx="8" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="52" y="386.25" font-size="15" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Items connected like a network (maps, friends)?</text>
+  <path d="M562,381 L676,381" fill="none" stroke="#15803d" stroke-width="2" marker-end="url(#m15803d)"/>
+  <text x="618" y="374" font-size="13" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">yes</text>
+  <rect x="680" y="357" width="180" height="48" rx="8" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="770.0" y="386.95" font-size="17" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Graph</text>
+  <path d="M300,407 L300,421" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#mb91c1c)"/>
+  <text x="312" y="419" font-size="12" fill="#b91c1c" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">no</text>
+  <rect x="40" y="425" width="520" height="48" rx="8" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="52" y="454.25" font-size="15" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">A list you mostly read by position?</text>
+  <path d="M562,449 L676,449" fill="none" stroke="#15803d" stroke-width="2" marker-end="url(#m15803d)"/>
+  <text x="618" y="442" font-size="13" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">yes</text>
+  <rect x="680" y="425" width="180" height="48" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="770.0" y="454.95" font-size="17" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Array</text>
+  <path d="M300,475 L300,489" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#mb91c1c)"/>
+  <text x="312" y="487" font-size="12" fill="#b91c1c" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">no</text>
+  <rect x="40" y="493" width="520" height="48" rx="8" fill="#ffffff" stroke="#1f2937" stroke-width="2"/>
+  <text x="52" y="522.25" font-size="15" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif">Lots of adding/removing in the middle?</text>
+  <path d="M562,517 L676,517" fill="none" stroke="#15803d" stroke-width="2" marker-end="url(#m15803d)"/>
+  <text x="618" y="510" font-size="13" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">yes</text>
+  <rect x="680" y="493" width="180" height="48" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="770.0" y="522.95" font-size="17" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Linked list</text>
+  <text x="450" y="580" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">Real programs often combine several structures. Start with the job, then pick the shape.</text>
+</svg>
