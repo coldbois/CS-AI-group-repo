@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">A rule-based application architecture</title><desc id="desc">Software components collect input, reason over a knowledge base, and present an output.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f9ff"/><stop offset="1" stop-color="#eef5f5"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#18324b" flood-opacity=".10"/></filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#53677d"/></marker>
+  <style>
+    .h1{font:700 34px Arial,sans-serif;fill:#102b46} .sub{font:400 17px Arial,sans-serif;fill:#52677b}
+    .h2{font:700 22px Arial,sans-serif;fill:#16324f} .txt{font:400 18px Arial,sans-serif;fill:#24415d}
+    .small{font:400 15px Arial,sans-serif;fill:#53677d} .tiny{font:400 13px Arial,sans-serif;fill:#607286}
+    .panel{fill:#fff;stroke:#d5e0eb;stroke-width:2;rx:18;filter:url(#shadow)}
+    .blue{fill:#e7f0ff;stroke:#6c91c9;stroke-width:2;rx:16} .green{fill:#e7f6ef;stroke:#68a88b;stroke-width:2;rx:16}
+    .gold{fill:#fff4dc;stroke:#d5a64f;stroke-width:2;rx:16} .rose{fill:#ffeded;stroke:#d78b8b;stroke-width:2;rx:16}
+    .line{stroke:#53677d;stroke-width:3;fill:none;marker-end:url(#arrow)} .dash{stroke:#8a9caf;stroke-width:2;stroke-dasharray:7 7;fill:none}
+  </style>
+</defs>
+<rect width="1200" height="720" fill="url(#bg)"/>
+<text x="55" y="62" class="h1">A rule-based application architecture</text>
+<text x="55" y="94" class="sub">Software components collect input, reason over a knowledge base, and present an output.</text>
+<rect x="55" y="230" width="225" height="190" class="blue"/><text x="167.5" y="268" text-anchor="middle" class="h2">USER INTERFACE</text><text x="167.5" y="306" text-anchor="middle" class="txt">Collect input</text><text x="167.5" y="333" text-anchor="middle" class="txt">Display response</text><path d="M285 325 H350" class="line"/><rect x="360" y="200" width="255" height="250" class="gold"/><text x="487.5" y="238" text-anchor="middle" class="h2" style="font-size:18px">APPLICATION LOGIC</text><text x="487.5" y="276" text-anchor="middle" class="txt">Validate input</text><text x="487.5" y="303" text-anchor="middle" class="txt">Call reasoning component</text><text x="487.5" y="330" text-anchor="middle" class="txt">Handle output</text><path d="M620 325 H690" class="line"/><rect x="700" y="200" width="235" height="250" class="green"/><text x="817.5" y="238" text-anchor="middle" class="h2">REASONER</text><text x="817.5" y="276" text-anchor="middle" class="txt">Match facts to rules</text><text x="817.5" y="303" text-anchor="middle" class="txt">Derive conclusions</text><path d="M940 325 H1000" class="line"/><rect x="1010" y="230" width="140" height="190" class="blue"/><text x="1080.0" y="268" text-anchor="middle" class="h2">OUTPUT</text><text x="1080.0" y="306" text-anchor="middle" class="txt">Result</text><text x="1080.0" y="333" text-anchor="middle" class="txt">or advice</text><path d="M815 465 V540 H485 V455" class="dash"/><text x="650" y="565" text-anchor="middle" class="small">Knowledge base supplies facts and rules to the reasoner</text>
+<text x="55" y="682" class="tiny">SOFTWARE &amp; SYMBOLIC AI  •  STUDY GUIDE</text>
+</svg>

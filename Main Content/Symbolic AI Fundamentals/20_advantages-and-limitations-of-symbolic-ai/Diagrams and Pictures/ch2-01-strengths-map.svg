@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Where symbolic AI can be strong</title><desc id="desc">Benefits often come from explicit knowledge and clearly specified rules.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f9ff"/><stop offset="1" stop-color="#eef5f5"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#18324b" flood-opacity=".10"/></filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#53677d"/></marker>
+  <style>
+    .h1{font:700 34px Arial,sans-serif;fill:#102b46} .sub{font:400 17px Arial,sans-serif;fill:#52677b}
+    .h2{font:700 22px Arial,sans-serif;fill:#16324f} .txt{font:400 18px Arial,sans-serif;fill:#24415d}
+    .small{font:400 15px Arial,sans-serif;fill:#53677d} .tiny{font:400 13px Arial,sans-serif;fill:#607286}
+    .panel{fill:#fff;stroke:#d5e0eb;stroke-width:2;rx:18;filter:url(#shadow)}
+    .blue{fill:#e7f0ff;stroke:#6c91c9;stroke-width:2;rx:16} .green{fill:#e7f6ef;stroke:#68a88b;stroke-width:2;rx:16}
+    .gold{fill:#fff4dc;stroke:#d5a64f;stroke-width:2;rx:16} .rose{fill:#ffeded;stroke:#d78b8b;stroke-width:2;rx:16}
+    .line{stroke:#53677d;stroke-width:3;fill:none;marker-end:url(#arrow)} .dash{stroke:#8a9caf;stroke-width:2;stroke-dasharray:7 7;fill:none}
+  </style>
+</defs>
+<rect width="1200" height="720" fill="url(#bg)"/>
+<text x="55" y="62" class="h1">Where symbolic AI can be strong</text>
+<text x="55" y="94" class="sub">Benefits often come from explicit knowledge and clearly specified rules.</text>
+<rect x="70" y="185" width="320" height="150" class="blue"/><text x="230.0" y="223" text-anchor="middle" class="h2">TRACEABILITY</text><text x="230.0" y="261" text-anchor="middle" class="txt">Follow the facts and rules</text><text x="230.0" y="288" text-anchor="middle" class="txt">used to reach a result</text><rect x="440" y="185" width="320" height="150" class="green"/><text x="600.0" y="223" text-anchor="middle" class="h2">CONSISTENCY</text><text x="600.0" y="261" text-anchor="middle" class="txt">Same encoded conditions</text><text x="600.0" y="288" text-anchor="middle" class="txt">receive the same rule treatment</text><rect x="810" y="185" width="320" height="150" class="gold"/><text x="970.0" y="223" text-anchor="middle" class="h2">STRUCTURE</text><text x="970.0" y="261" text-anchor="middle" class="txt">Represent entities, facts</text><text x="970.0" y="288" text-anchor="middle" class="txt">and relationships explicitly</text><rect x="250" y="390" width="320" height="150" class="green"/><text x="410.0" y="428" text-anchor="middle" class="h2" style="font-size:18px">SMALL DATA NEED</text><text x="410.0" y="466" text-anchor="middle" class="txt">No large training set is</text><text x="410.0" y="493" text-anchor="middle" class="txt">needed for hand-coded rules</text><rect x="630" y="390" width="320" height="150" class="blue"/><text x="790.0" y="428" text-anchor="middle" class="h2">RULE CONTROL</text><text x="790.0" y="466" text-anchor="middle" class="txt">Specific rules can often</text><text x="790.0" y="493" text-anchor="middle" class="txt">be reviewed and updated</text>
+<text x="55" y="682" class="tiny">SOFTWARE &amp; SYMBOLIC AI  •  STUDY GUIDE</text>
+</svg>

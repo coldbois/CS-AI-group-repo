@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Where traditional rule systems can struggle</title><desc id="desc">These are common challenges, not absolute limits of every symbolic approach.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f9ff"/><stop offset="1" stop-color="#eef5f5"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#18324b" flood-opacity=".10"/></filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#53677d"/></marker>
+  <style>
+    .h1{font:700 34px Arial,sans-serif;fill:#102b46} .sub{font:400 17px Arial,sans-serif;fill:#52677b}
+    .h2{font:700 22px Arial,sans-serif;fill:#16324f} .txt{font:400 18px Arial,sans-serif;fill:#24415d}
+    .small{font:400 15px Arial,sans-serif;fill:#53677d} .tiny{font:400 13px Arial,sans-serif;fill:#607286}
+    .panel{fill:#fff;stroke:#d5e0eb;stroke-width:2;rx:18;filter:url(#shadow)}
+    .blue{fill:#e7f0ff;stroke:#6c91c9;stroke-width:2;rx:16} .green{fill:#e7f6ef;stroke:#68a88b;stroke-width:2;rx:16}
+    .gold{fill:#fff4dc;stroke:#d5a64f;stroke-width:2;rx:16} .rose{fill:#ffeded;stroke:#d78b8b;stroke-width:2;rx:16}
+    .line{stroke:#53677d;stroke-width:3;fill:none;marker-end:url(#arrow)} .dash{stroke:#8a9caf;stroke-width:2;stroke-dasharray:7 7;fill:none}
+  </style>
+</defs>
+<rect width="1200" height="720" fill="url(#bg)"/>
+<text x="55" y="62" class="h1">Where traditional rule systems can struggle</text>
+<text x="55" y="94" class="sub">These are common challenges, not absolute limits of every symbolic approach.</text>
+<rect x="55" y="185" width="340" height="150" class="rose"/><text x="225.0" y="223" text-anchor="middle" class="h2" style="font-size:18px">KNOWLEDGE CAPTURE</text><text x="225.0" y="261" text-anchor="middle" class="txt">Experts must provide and</text><text x="225.0" y="288" text-anchor="middle" class="txt">maintain the domain knowledge</text><rect x="430" y="185" width="340" height="150" class="gold"/><text x="600.0" y="223" text-anchor="middle" class="h2">UNCERTAINTY</text><text x="600.0" y="261" text-anchor="middle" class="txt">Strict yes/no rules may not</text><text x="600.0" y="288" text-anchor="middle" class="txt">represent degrees of belief</text><rect x="805" y="185" width="340" height="150" class="rose"/><text x="975.0" y="223" text-anchor="middle" class="h2" style="font-size:18px">UNSTRUCTURED INPUT</text><text x="975.0" y="261" text-anchor="middle" class="txt">Raw images, audio and text</text><text x="975.0" y="288" text-anchor="middle" class="txt">need suitable interpretation</text><rect x="250" y="400" width="340" height="150" class="gold"/><text x="420.0" y="438" text-anchor="middle" class="h2" style="font-size:18px">RULE COMPLEXITY</text><text x="420.0" y="476" text-anchor="middle" class="txt">Many interacting conditions</text><text x="420.0" y="503" text-anchor="middle" class="txt">can be hard to maintain</text><rect x="630" y="400" width="340" height="150" class="rose"/><text x="800.0" y="438" text-anchor="middle" class="h2">NOVEL CASES</text><text x="800.0" y="476" text-anchor="middle" class="txt">No matching rule may mean</text><text x="800.0" y="503" text-anchor="middle" class="txt">no useful conclusion</text>
+<text x="55" y="682" class="tiny">SOFTWARE &amp; SYMBOLIC AI  •  STUDY GUIDE</text>
+</svg>

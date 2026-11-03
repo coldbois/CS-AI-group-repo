@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">When a crisp rule meets an uncertain world</title><desc id="desc">A deterministic rule can be precise about a threshold without making the underlying evidence certain.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f9ff"/><stop offset="1" stop-color="#eef5f5"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#18324b" flood-opacity=".10"/></filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#53677d"/></marker>
+  <style>
+    .h1{font:700 34px Arial,sans-serif;fill:#102b46} .sub{font:400 17px Arial,sans-serif;fill:#52677b}
+    .h2{font:700 22px Arial,sans-serif;fill:#16324f} .txt{font:400 18px Arial,sans-serif;fill:#24415d}
+    .small{font:400 15px Arial,sans-serif;fill:#53677d} .tiny{font:400 13px Arial,sans-serif;fill:#607286}
+    .panel{fill:#fff;stroke:#d5e0eb;stroke-width:2;rx:18;filter:url(#shadow)}
+    .blue{fill:#e7f0ff;stroke:#6c91c9;stroke-width:2;rx:16} .green{fill:#e7f6ef;stroke:#68a88b;stroke-width:2;rx:16}
+    .gold{fill:#fff4dc;stroke:#d5a64f;stroke-width:2;rx:16} .rose{fill:#ffeded;stroke:#d78b8b;stroke-width:2;rx:16}
+    .line{stroke:#53677d;stroke-width:3;fill:none;marker-end:url(#arrow)} .dash{stroke:#8a9caf;stroke-width:2;stroke-dasharray:7 7;fill:none}
+  </style>
+</defs>
+<rect width="1200" height="720" fill="url(#bg)"/>
+<text x="55" y="62" class="h1">When a crisp rule meets an uncertain world</text>
+<text x="55" y="94" class="sub">A deterministic rule can be precise about a threshold without making the underlying evidence certain.</text>
+<rect x="70" y="190" width="300" height="220" class="blue"/><text x="220.0" y="228" text-anchor="middle" class="h2">OBSERVATIONS</text><text x="220.0" y="266" text-anchor="middle" class="txt">Fever</text><text x="220.0" y="293" text-anchor="middle" class="txt">Cough</text><text x="220.0" y="320" text-anchor="middle" class="txt">Fatigue</text><path d="M370 300 H440" class="line"/><rect x="450" y="190" width="300" height="220" class="gold"/><text x="600.0" y="228" text-anchor="middle" class="h2">SIMPLE RULE</text><text x="600.0" y="266" text-anchor="middle" class="txt">IF fever AND cough</text><text x="600.0" y="293" text-anchor="middle" class="txt">THEN flag for review</text><text x="600.0" y="320" text-anchor="middle" class="txt">(illustrative only)</text><path d="M750 300 H820" class="line"/><rect x="830" y="190" width="300" height="220" class="rose"/><text x="980.0" y="228" text-anchor="middle" class="h2">LIMIT</text><text x="980.0" y="266" text-anchor="middle" class="txt">Several causes may fit</text><text x="980.0" y="293" text-anchor="middle" class="txt">The rule is not a diagnosis</text><text x="980.0" y="320" text-anchor="middle" class="txt">More evidence is needed</text><text x="600" y="500" text-anchor="middle" class="h2">Extensions can add probabilities, fuzzy values or other ways to model uncertainty.</text>
+<text x="55" y="682" class="tiny">SOFTWARE &amp; SYMBOLIC AI  •  STUDY GUIDE</text>
+</svg>
