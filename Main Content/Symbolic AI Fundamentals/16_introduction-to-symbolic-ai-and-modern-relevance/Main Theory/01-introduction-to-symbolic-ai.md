@@ -1,4 +1,4 @@
-# Chapter 1 — Introduction to Symbolic AI and Modern Relevance
+# Chapter 16 — Introduction to Symbolic AI and Modern Relevance
 
 ## Learning goals
 By the end of this chapter, you should be able to:
@@ -11,13 +11,13 @@ By the end of this chapter, you should be able to:
 
 **Prerequisites:** Basic familiarity with computers and the idea that a program follows instructions. No AI programming experience is required.
 
-## 1.1 What is Artificial Intelligence?
+## 16.1 What is Artificial Intelligence?
 
 Artificial Intelligence (AI) is a field of computing concerned with building systems that perform tasks commonly associated with intelligent behaviour, such as reasoning, problem-solving, planning, perception and language use. AI is not one single technique. Researchers have developed different approaches to represent information and produce intelligent behaviour.
 
 One influential approach is **Symbolic Artificial Intelligence**, often called **Symbolic AI** or **classical AI**.
 
-## 1.2 What is Symbolic AI?
+## 16.2 What is Symbolic AI?
 
 Symbolic AI represents knowledge explicitly using symbols and structured relationships. A system can store facts, describe relationships, and apply logical rules to derive conclusions. Instead of relying only on patterns learned from a large dataset, a symbolic system uses knowledge that has been represented in a form its reasoning procedure can manipulate [1][2].
 
@@ -34,7 +34,7 @@ The application has applied an explicit rule to a supplied fact. It has not lear
 ![Flow diagram showing facts entering a knowledge base, an inference engine applying rules, and a conclusion being produced.](../Diagrams%20and%20Pictures/ch1-01-symbolic-ai-process.svg)
 
 
-## 1.3 The main building blocks
+## 16.3 The main building blocks
 
 ### Facts
 
@@ -62,7 +62,7 @@ An **inference engine** applies reasoning procedures to the knowledge base and c
 ![Diagram showing two parent facts and a grandparent rule producing a derived grandparent relationship.](../Diagrams%20and%20Pictures/ch1-02-facts-rules-conclusions.svg)
 
 
-## 1.4 How does symbolic reasoning work?
+## 16.4 How does symbolic reasoning work?
 
 A typical reasoning cycle is:
 
@@ -83,7 +83,7 @@ Two common rule-processing strategies are:
 
 These strategies describe different directions of reasoning. They are not the only reasoning methods used in symbolic AI.
 
-## 1.5 Symbolic AI and machine learning
+## 16.5 Symbolic AI and machine learning
 
 Symbolic AI and machine learning are different approaches, but they can also be combined.
 
@@ -101,7 +101,7 @@ This is a simplified comparison. Machine-learning systems vary, and symbolic sys
 ![Comparison diagram showing explicit facts and rules in symbolic AI and data-driven learning in machine learning, with a link indicating they can be combined.](../Diagrams%20and%20Pictures/ch1-04-symbolic-vs-machine-learning.svg)
 
 
-## 1.6 A short historical orientation
+## 16.6 A short historical orientation
 
 The modern field of AI is commonly traced to the 1956 Dartmouth Summer Research Project on Artificial Intelligence, where researchers helped establish the field and the term [3]. Symbolic representation and logical reasoning became important strands of early AI work. Later decades saw the development of expert systems, while statistical machine learning and deep learning became increasingly influential in other areas.
 
@@ -110,7 +110,7 @@ This is a broad orientation, not a complete history. AI developed through severa
 ![Timeline showing the naming of AI in 1956, expert systems, the growth of statistical machine learning, deep learning, and current neuro-symbolic research.](../Diagrams%20and%20Pictures/ch1-05-history-and-modern-relevance.svg)
 
 
-## 1.7 Why is Symbolic AI still relevant?
+## 16.7 Why is Symbolic AI still relevant?
 
 Symbolic methods remain useful when information can be represented explicitly and a task benefits from clear relationships, constraints or reasoning steps.
 
@@ -136,7 +136,7 @@ A planning problem can be represented using an initial state, a goal, and action
 
 **Neuro-symbolic AI** explores ways to combine neural approaches, such as deep learning, with symbolic approaches such as logic and knowledge representation [1][8]. A neural component might identify objects in an image, while a symbolic component reasons about the recognized objects and explicit rules. This is a simplified illustration; real architectures differ.
 
-## 1.8 Check your understanding
+## 16.8 Check your understanding
 
 1. In your own words, what makes an AI approach symbolic?
 2. What is the difference between a fact and a rule?
