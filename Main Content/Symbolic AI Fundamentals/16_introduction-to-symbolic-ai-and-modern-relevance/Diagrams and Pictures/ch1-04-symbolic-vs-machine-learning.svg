@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Symbolic AI and machine learning</title><desc id="desc">A simplified comparison of how the two approaches obtain and use knowledge.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7f9ff"/><stop offset="1" stop-color="#eef5f5"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#18324b" flood-opacity=".10"/></filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#53677d"/></marker>
+  <style>
+    .h1{font:700 34px Arial,sans-serif;fill:#102b46} .sub{font:400 17px Arial,sans-serif;fill:#52677b}
+    .h2{font:700 22px Arial,sans-serif;fill:#16324f} .txt{font:400 18px Arial,sans-serif;fill:#24415d}
+    .small{font:400 15px Arial,sans-serif;fill:#53677d} .tiny{font:400 13px Arial,sans-serif;fill:#607286}
+    .panel{fill:#fff;stroke:#d5e0eb;stroke-width:2;rx:18;filter:url(#shadow)}
+    .blue{fill:#e7f0ff;stroke:#6c91c9;stroke-width:2;rx:16} .green{fill:#e7f6ef;stroke:#68a88b;stroke-width:2;rx:16}
+    .gold{fill:#fff4dc;stroke:#d5a64f;stroke-width:2;rx:16} .rose{fill:#ffeded;stroke:#d78b8b;stroke-width:2;rx:16}
+    .line{stroke:#53677d;stroke-width:3;fill:none;marker-end:url(#arrow)} .dash{stroke:#8a9caf;stroke-width:2;stroke-dasharray:7 7;fill:none}
+  </style>
+</defs>
+<rect width="1200" height="720" fill="url(#bg)"/>
+<text x="55" y="62" class="h1">Symbolic AI and machine learning</text>
+<text x="55" y="94" class="sub">A simplified comparison of how the two approaches obtain and use knowledge.</text>
+<rect x="70" y="185" width="480" height="360" class="blue"/><text x="310.0" y="223" text-anchor="middle" class="h2">SYMBOLIC AI</text><text x="310.0" y="261" text-anchor="middle" class="txt">Knowledge is explicitly represented</text><text x="310.0" y="288" text-anchor="middle" class="txt">Facts + rules + relationships</text><text x="310.0" y="315" text-anchor="middle" class="txt">Inference applies defined rules</text><text x="310.0" y="342" text-anchor="middle" class="txt">Useful when conditions are clear</text><text x="310.0" y="369" text-anchor="middle" class="txt">Reasoning path can often be traced</text><rect x="650" y="185" width="480" height="360" class="green"/><text x="890.0" y="223" text-anchor="middle" class="h2" style="font-size:18px">MACHINE LEARNING</text><text x="890.0" y="261" text-anchor="middle" class="txt">Model is fitted using example data</text><text x="890.0" y="288" text-anchor="middle" class="txt">Learns statistical patterns</text><text x="890.0" y="315" text-anchor="middle" class="txt">Uses a trained model for predictions</text><text x="890.0" y="342" text-anchor="middle" class="txt">Useful for complex data patterns</text><text x="890.0" y="369" text-anchor="middle" class="txt">Explanations depend on the model</text><path d="M550 360 H650" class="line"/><text x="600" y="330" text-anchor="middle" class="small">Can be combined</text>
+<text x="55" y="682" class="tiny">SOFTWARE &amp; SYMBOLIC AI  •  STUDY GUIDE</text>
+</svg>

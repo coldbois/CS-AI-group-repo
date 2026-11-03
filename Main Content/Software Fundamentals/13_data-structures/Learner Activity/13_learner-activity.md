@@ -1,105 +1,148 @@
-# Part 13 — Learner Activity: Pick the Right Structure
+# Part 13 — Learner Activity: Data Structures in Everyday Life
 
-**Time:** about 20 minutes · **You need:** pen and paper (Python is optional)
+**Time:** about 20 minutes · **You need:** pen and paper · **No coding needed**
 
----
+Use this word bank for every activity:
 
-## Activity A — Match the problem to the structure
-
-For each situation, choose **array, linked list, stack, queue, tree, graph, or hash table**, and write **one sentence** explaining why.
-
-1. A café app serves coffee orders in the order customers paid.
-2. A browser's **Back** button returns you to the page you visited most recently.
-3. A student ID card system must find a student's record instantly from their ID number.
-4. A navigation app finds a route between cities connected by roads.
-5. A company chart shows the CEO, the managers under the CEO, and the staff under each manager.
-6. A program stores exactly 7 daily temperatures and often asks "what was the temperature on day 3?"
+> **array · linked list · stack · queue · tree · graph · hash table**
 
 ---
 
-## Activity B — Trace a stack and a queue
+## Activity 1 — Warm-up: what does it remind you of?
 
-Start with an **empty stack** and an **empty queue**. Apply the same operations to both:
+Match each everyday thing to a data structure from the word bank.
+
+| Everyday thing | Data structure |
+|---|---|
+| a) A pile of plates in the kitchen | |
+| b) People waiting in line at a bus stop | |
+| c) A family tree | |
+| d) A row of numbered lockers | |
+| e) A map of cities joined by roads | |
+| f) A phone's contact list: type a name, get the number | |
+
+> 💡 **Hint:** look back at the pictures in the Main Theory if you get stuck.
+
+---
+
+## Activity 2 — Which one fits?
+
+Read each situation and pick a data structure from the word bank. Then finish the sentence: *"I chose it because…"*
+
+1. A coffee shop makes drinks in the same order people paid.
+2. The **Back** button in your web browser takes you to the page you just left.
+3. Your school wants to find a student's record quickly by typing their student ID.
+4. The folders on your computer: *Documents* contains *Homework*, and *Homework* contains *Maths*.
+5. A social media app shows who is friends with whom.
+
+> 💡 **Hint:** ask yourself, *"Is the newest one used first, or the oldest one? Is there a key? Are there levels? Are there connections?"*
+
+---
+
+## Activity 3 — Follow the steps
+
+### 3a. A stack of books 📚
+
+You put books on a pile, one on top of another. You can only take the **top** book.
 
 ```
-add 10
-add 20
-add 30
-remove
-add 40
-remove
+put Red  →  put Blue  →  put Green  →  take one
 ```
 
-For the stack, *add* = push and *remove* = pop. For the queue, *add* = enqueue and *remove* = dequeue.
+1. Which book do you take?
+2. Which books are left on the pile, from bottom to top?
 
-Fill in the table:
+### 3b. A queue at the bus stop 🚌
 
-| Step | Operation | Stack (bottom → top) | Queue (front → back) |
-|---|---|---|---|
-| 1 | add 10 | | |
-| 2 | add 20 | | |
-| 3 | add 30 | | |
-| 4 | remove | | |
-| 5 | add 40 | | |
-| 6 | remove | | |
+People join the line one at a time. The bus takes the person at the **front**.
 
-**Questions:** which values were removed from the stack? Which were removed from the queue?
+```
+Ana joins  →  Ben joins  →  Cho joins  →  bus takes one person
+```
 
----
+1. Who gets on the bus?
+2. Who is still waiting, from front to back?
 
-## Activity C — Think deeper (discussion)
+### 3c. Draw it
 
-A music app has a "Play next" button that puts a song at the front of the waiting list, and an "Add to queue" button that puts it at the back. Is the waiting list a pure stack, a pure queue, or neither? Explain.
+Draw boxes to show the pile of books after 3a and the line of people after 3b. Label the **top** of the stack and the **front** and **back** of the queue.
 
 ---
 
-## ✅ Answers / expected outcomes
+## Activity 4 — Draw your own tree
 
-### Activity A
+Draw a small tree with **at least 6 boxes** about something you know, for example:
 
-| # | Structure | Reason |
-|---|---|---|
-| 1 | **Queue** | First paid, first served → FIFO. |
-| 2 | **Stack** | The most recent page comes back first → LIFO. |
-| 3 | **Hash table** | Key (student ID) → value (record) with very fast lookup. |
-| 4 | **Graph** | Cities are nodes, roads are edges; routes can loop. |
-| 5 | **Tree** | A hierarchy with one root (the CEO) and levels below. |
-| 6 | **Array** | A fixed number of items accessed by position (index). |
+- your family (grandparents → parents → you and your siblings), or
+- your school (school → faculties → courses).
 
-Other answers can be accepted if the reason is sound, e.g. a sorted array for #3 also works, but a hash table is the usual choice for fast lookup by key.
+Then label:
 
-### Activity B
+- the **root** (the box at the very top),
+- one **parent** and its **children**,
+- every **leaf** (a box with nothing below it).
 
-| Step | Operation | Stack (bottom → top) | Queue (front → back) |
-|---|---|---|---|
-| 1 | add 10 | `10` | `10` |
-| 2 | add 20 | `10, 20` | `10, 20` |
-| 3 | add 30 | `10, 20, 30` | `10, 20, 30` |
-| 4 | remove | `10, 20` (removed **30**) | `20, 30` (removed **10**) |
-| 5 | add 40 | `10, 20, 40` | `20, 30, 40` |
-| 6 | remove | `10, 20` (removed **40**) | `30, 40` (removed **20**) |
+---
 
-- Stack removed **30, then 40** (always the newest).
-- Queue removed **10, then 20** (always the oldest).
+## ⭐ Bonus (optional) — Try it in Python
 
-You can check this in Python:
+If you have Python, type this in and run it. Can you predict what it prints **before** you run it?
 
 ```python
-from collections import deque
-stack, queue = [], deque()
-removed_s, removed_q = [], []
-for op in ["add 10", "add 20", "add 30", "remove", "add 40", "remove"]:
-    if op == "remove":
-        removed_s.append(stack.pop())
-        removed_q.append(queue.popleft())
-    else:
-        value = int(op.split()[1])
-        stack.append(value)
-        queue.append(value)
-print(removed_s, stack)        # [30, 40] [10, 20]
-print(removed_q, list(queue))  # [10, 20] [30, 40]
+pile = []
+pile.append("Red")
+pile.append("Blue")
+pile.append("Green")
+print(pile.pop())
+print(pile)
 ```
 
-### Activity C
+---
 
-**Neither.** "Add to queue" behaves like a queue (add at the back), but "Play next" adds at the front, which a pure queue does not allow. A structure that lets you add and remove at **both** ends is called a **deque** (double-ended queue). Python's `collections.deque` supports this with `appendleft()`.
+## ✅ Answers
+
+### Activity 1
+
+| Everyday thing | Data structure |
+|---|---|
+| a) Pile of plates | **stack** |
+| b) Line at a bus stop | **queue** |
+| c) Family tree | **tree** |
+| d) Numbered lockers | **array** |
+| e) Map of cities and roads | **graph** |
+| f) Contact list: name → number | **hash table** |
+
+### Activity 2
+
+| # | Answer | Because… |
+|---|---|---|
+| 1 | **queue** | first to pay, first to be served (FIFO) |
+| 2 | **stack** | the most recent page comes back first (LIFO) |
+| 3 | **hash table** | the student ID is a key that finds the record straight away |
+| 4 | **tree** | folders sit inside folders, in levels |
+| 5 | **graph** | people are connected to each other, like a network |
+
+Other answers can be fine if the reason makes sense.
+
+### Activity 3
+
+- **3a.** You take **Green** (it went on last, so it comes off first). Left on the pile, bottom to top: **Red, Blue**.
+- **3b.** **Ana** gets on the bus (she arrived first). Still waiting, front to back: **Ben, Cho**.
+- **3c.** The drawing should show **Blue** on top of **Red** with "top" next to Blue, and **Ben** at the front and **Cho** at the back of the line.
+
+### Activity 4
+
+Check the drawing:
+
+- The root is the one box at the top with nothing above it.
+- Every other box has exactly **one** box above it (its parent).
+- The leaves are the boxes with nothing below them.
+
+### ⭐ Bonus
+
+```
+Green
+['Red', 'Blue']
+```
+
+`pop()` takes the **last** item added, which is exactly how a stack works.

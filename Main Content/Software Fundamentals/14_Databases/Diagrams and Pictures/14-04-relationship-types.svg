@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" font-family="Segoe UI, Arial, sans-serif">
+  <defs></defs>
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="22" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Three kinds of relationship</text>
+  <text x="450.0" y="60" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">How rows in one table connect to rows in another</text>
+  <text x="30" y="125" font-size="16" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">One-to-one</text>
+  <rect x="200" y="95" width="170" height="50" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="285.0" y="125.6" font-size="16" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Person</text>
+  <rect x="480" y="95" width="170" height="50" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="565.0" y="125.6" font-size="16" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Passport</text>
+  <line x1="370" y1="120" x2="480" y2="120" stroke="#1f2937" stroke-width="2.5"/>
+  <text x="385" y="113" font-size="13" fill="#b91c1c" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">1</text>
+  <text x="466" y="113" font-size="13" fill="#b91c1c" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">1</text>
+  <text x="465" y="165" font-size="13" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">each person has one passport, each passport belongs to one person</text>
+  <text x="30" y="245" font-size="16" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">One-to-many</text>
+  <rect x="200" y="215" width="170" height="50" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="285.0" y="245.6" font-size="16" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Faculty</text>
+  <rect x="480" y="215" width="170" height="50" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="565.0" y="245.6" font-size="16" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Student</text>
+  <line x1="370" y1="240" x2="480" y2="240" stroke="#1f2937" stroke-width="2.5"/>
+  <text x="385" y="233" font-size="13" fill="#b91c1c" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">1</text>
+  <text x="466" y="233" font-size="13" fill="#b91c1c" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">many</text>
+  <text x="465" y="285" font-size="13" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">one faculty has many students, each student is in one faculty</text>
+  <text x="30" y="365" font-size="16" fill="#1f2937" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Many-to-many</text>
+  <rect x="200" y="335" width="170" height="50" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="285.0" y="365.6" font-size="16" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Student</text>
+  <rect x="560" y="335" width="170" height="50" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="645.0" y="365.6" font-size="16" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Course</text>
+  <rect x="395" y="340" width="140" height="40" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="465.0" y="364.9" font-size="14" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Enrolments</text>
+  <line x1="370" y1="360" x2="395" y2="360" stroke="#1f2937" stroke-width="2.5"/>
+  <line x1="535" y1="360" x2="560" y2="360" stroke="#1f2937" stroke-width="2.5"/>
+  <text x="465" y="443" font-size="12" fill="#7c3aed" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">(a linking table turns it into two one-to-many links)</text>
+  <text x="465" y="405" font-size="13" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">a student takes many courses, a course has many students</text>
+</svg>

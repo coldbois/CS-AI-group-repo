@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450" font-family="Arial, Helvetica, sans-serif">
+  <title>Figure 3: Architecture of an expert system</title>
+  <desc>The user talks to a user interface. The inference engine reads rules from the knowledge base and facts from working memory, adds new facts, and passes a rule trace to the explanation facility.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333333"/>
+    </marker>
+  </defs>
+  <rect width="900" height="450" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#111111">Figure 3: Architecture of an expert system</text>
+
+  <rect x="30" y="185" width="100" height="70" rx="8" fill="#fff4d6" stroke="#b58900" stroke-width="2"/>
+  <text x="80" y="226" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">User</text>
+
+  <rect x="170" y="185" width="130" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="235" y="214" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">User</text>
+  <text x="235" y="232" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">interface</text>
+
+  <rect x="380" y="185" width="150" height="70" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="455" y="212" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">Inference engine</text>
+  <text x="455" y="231" text-anchor="middle" font-size="12" fill="#111111">matches rules to facts,</text>
+  <text x="455" y="246" text-anchor="middle" font-size="12" fill="#111111">fires rules</text>
+
+  <rect x="640" y="185" width="170" height="70" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="725" y="212" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">Explanation</text>
+  <text x="725" y="231" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">facility</text>
+  <text x="725" y="247" text-anchor="middle" font-size="12" fill="#111111">answers "Why?"</text>
+
+  <rect x="380" y="55" width="150" height="70" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="455" y="85" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">Knowledge base</text>
+  <text x="455" y="105" text-anchor="middle" font-size="12" fill="#111111">IF-THEN rules</text>
+
+  <rect x="380" y="315" width="150" height="70" rx="8" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="455" y="345" text-anchor="middle" font-size="15" font-weight="bold" fill="#111111">Working memory</text>
+  <text x="455" y="365" text-anchor="middle" font-size="12" fill="#111111">facts about this case</text>
+
+  <line x1="130" y1="206" x2="168" y2="206" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="168" y1="234" x2="132" y2="234" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="300" y1="206" x2="378" y2="206" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="378" y1="234" x2="302" y2="234" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="339" y="198" text-anchor="middle" font-size="11" fill="#111111">facts</text>
+  <text x="339" y="249" text-anchor="middle" font-size="11" fill="#111111">answers</text>
+
+  <line x1="455" y1="125" x2="455" y2="183" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="465" y="158" font-size="12" fill="#111111">reads rules</text>
+
+  <line x1="435" y1="313" x2="435" y2="257" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="425" y="291" text-anchor="end" font-size="12" fill="#111111">reads facts</text>
+  <line x1="475" y1="257" x2="475" y2="313" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="485" y="291" font-size="12" fill="#111111">adds new facts</text>
+
+  <line x1="530" y1="220" x2="638" y2="220" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="584" y="212" text-anchor="middle" font-size="11" fill="#111111">rule trace</text>
+
+  <text x="560" y="80" font-size="12" fill="#111111">Written by people: a domain expert</text>
+  <text x="560" y="96" font-size="12" fill="#111111">and a knowledge engineer.</text>
+  <text x="560" y="340" font-size="12" fill="#111111">Starts with the user's inputs, then</text>
+  <text x="560" y="356" font-size="12" fill="#111111">grows as rules add new facts.</text>
+
+  <text x="450" y="425" text-anchor="middle" font-size="13" fill="#111111">The inference engine is general-purpose. Swap the knowledge base and the same engine can work on a new topic.</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="900" height="440" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="m15803d" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#15803d"/></marker><marker id="s15803d" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#15803d"/></marker><marker id="m1d4ed8" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/></marker><marker id="s1d4ed8" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#1d4ed8"/></marker><marker id="mb91c1c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker><marker id="sb91c1c" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#b91c1c"/></marker></defs>
+  <rect width="900" height="440" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="22" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Why not just a shared file?</text>
+  <text x="450.0" y="60" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Many people + one file = trouble. A DBMS manages the traffic.</text>
+  <rect x="20" y="75" width="420" height="340" rx="14" fill="#fee2e2" stroke="#b91c1c" stroke-width="1"/>
+  <rect x="460" y="75" width="420" height="340" rx="14" fill="#dcfce7" stroke="#15803d" stroke-width="1"/>
+  <text x="230" y="102" font-size="18" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Shared file</text>
+  <text x="670" y="102" font-size="18" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Database + DBMS</text>
+  <circle cx="70" cy="140" r="18" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <rect x="46" y="162" width="48" height="58" rx="16" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <circle cx="510" cy="140" r="18" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <rect x="486" y="162" width="48" height="58" rx="16" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <circle cx="230" cy="140" r="18" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <rect x="206" y="162" width="48" height="58" rx="16" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <circle cx="670" cy="140" r="18" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <rect x="646" y="162" width="48" height="58" rx="16" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <circle cx="390" cy="140" r="18" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <rect x="366" y="162" width="48" height="58" rx="16" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <circle cx="830" cy="140" r="18" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <rect x="806" y="162" width="48" height="58" rx="16" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <path d="M180,270 L260,270 L280,290 L280,370 L180,370 Z" fill="#fff" stroke="#6b7280" stroke-width="2"/>
+  <text x="230" y="330" font-size="13" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">data.txt</text>
+  <path d="M70,225 L198.0,266" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#mb91c1c)"/>
+  <path d="M230,225 L230.0,266" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#mb91c1c)"/>
+  <path d="M390,225 L262.0,266" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#mb91c1c)"/>
+  <text x="75" y="300" font-size="12" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif"><tspan x="75" dy="0">both saved:</tspan><tspan x="75" dy="15.0">one change lost</tspan></text>
+  <text x="370" y="300" font-size="12" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif"><tspan x="370" dy="0">power cut:</tspan><tspan x="370" dy="15.0">half-written</tspan></text>
+  <text x="230" y="398" font-size="13" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">slow to search · no checks · copies get out of sync</text>
+  <rect x="580" y="255" width="180" height="60" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="670.0" y="281.425" font-size="13" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold"><tspan x="670.0" dy="0">DBMS</tspan><tspan x="670.0" dy="16.25">checks · queues · recovers</tspan></text>
+  <path d="M510,225 L622.0,251" fill="none" stroke="#15803d" stroke-width="2" marker-end="url(#m15803d)"/>
+  <path d="M670,225 L670.0,251" fill="none" stroke="#15803d" stroke-width="2" marker-end="url(#m15803d)"/>
+  <path d="M830,225 L718.0,251" fill="none" stroke="#15803d" stroke-width="2" marker-end="url(#m15803d)"/>
+  <path d="M625,342 L625,378 A45.0,12 0 0 0 715,378 L715,342" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <ellipse cx="670.0" cy="342" rx="45.0" ry="12" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <path d="M670,316 L670,330" fill="none" stroke="#1d4ed8" stroke-width="2" marker-end="url(#m1d4ed8)"/>
+  <text x="670" y="398" font-size="13" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">fast search · rules enforced · safe after crashes</text>
+</svg>

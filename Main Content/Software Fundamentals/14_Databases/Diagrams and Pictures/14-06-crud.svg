@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" font-family="Segoe UI, Arial, sans-serif">
+  <defs></defs>
+  <rect width="900" height="380" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="22" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">The four basic jobs: CRUD</text>
+  <text x="450.0" y="60" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Every app that saves data does these four things</text>
+  <rect x="25" y="80" width="200" height="230" rx="12" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="125" y="128" font-size="40" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">C</text>
+  <text x="125" y="158" font-size="16" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Create  →  INSERT</text>
+  <text x="125" y="182" font-size="13" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">(add a new contact)</text>
+  <rect x="35" y="198" width="180" height="100" rx="8" fill="#ffffff" stroke="#15803d" stroke-width="2"/>
+  <text x="47" y="244.975" font-size="11" fill="#1f2937" text-anchor="start" font-family="Consolas, Menlo, monospace"><tspan x="47" dy="0">INSERT INTO Students</tspan><tspan x="47" dy="13.75">VALUES (4, &#x27;Dev&#x27;, 3, …);</tspan></text>
+  <rect x="243" y="80" width="200" height="230" rx="12" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="343" y="128" font-size="40" fill="#1d4ed8" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">R</text>
+  <text x="343" y="158" font-size="16" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Read  →  SELECT</text>
+  <text x="343" y="182" font-size="13" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">(look up a contact)</text>
+  <rect x="253" y="198" width="180" height="100" rx="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="265" y="244.975" font-size="11" fill="#1f2937" text-anchor="start" font-family="Consolas, Menlo, monospace"><tspan x="265" dy="0">SELECT name</tspan><tspan x="265" dy="13.75">FROM Students;</tspan></text>
+  <rect x="461" y="80" width="200" height="230" rx="12" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="561" y="128" font-size="40" fill="#b45309" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">U</text>
+  <text x="561" y="158" font-size="16" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Update  →  UPDATE</text>
+  <text x="561" y="182" font-size="13" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">(change a phone number)</text>
+  <rect x="471" y="198" width="180" height="100" rx="8" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+  <text x="483" y="238.1" font-size="11" fill="#1f2937" text-anchor="start" font-family="Consolas, Menlo, monospace"><tspan x="483" dy="0">UPDATE Students</tspan><tspan x="483" dy="13.75">SET year = 2</tspan><tspan x="483" dy="13.75">WHERE student_id = 3;</tspan></text>
+  <rect x="679" y="80" width="200" height="230" rx="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="779" y="128" font-size="40" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">D</text>
+  <text x="779" y="158" font-size="16" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Delete  →  DELETE</text>
+  <text x="779" y="182" font-size="13" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-style="italic">(remove a contact)</text>
+  <rect x="689" y="198" width="180" height="100" rx="8" fill="#ffffff" stroke="#b91c1c" stroke-width="2"/>
+  <text x="701" y="244.975" font-size="11" fill="#1f2937" text-anchor="start" font-family="Consolas, Menlo, monospace"><tspan x="701" dy="0">DELETE FROM Students</tspan><tspan x="701" dy="13.75">WHERE student_id = 4;</tspan></text>
+  <rect x="150" y="325" width="600" height="40" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="450.0" y="350.25" font-size="15" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">⚠ UPDATE or DELETE without WHERE changes EVERY row!</text>
+</svg>

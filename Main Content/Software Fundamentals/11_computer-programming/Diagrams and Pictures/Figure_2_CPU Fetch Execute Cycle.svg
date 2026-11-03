@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="141" height="271" viewBox="0 0 141 271"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8"
+            refX="7" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="black"/>
+    </marker>
+  </defs>
+
+  <style>
+    text {
+      font-family: "DejaVu Sans", sans-serif;
+      font-size: 13px;
+      text-anchor: middle;
+      fill: black;
+    }
+    .box {
+      fill: #d9d9d9;
+      stroke: black;
+      stroke-width: 1;
+    }
+    .line {
+      fill: none;
+      stroke: black;
+      stroke-width: 1;
+      marker-end: url(#arrow);
+    }
+  </style>
+
+  <rect x="35" y="1" width="104" height="36" class="box"/>
+  <text x="87" y="23">bootstrap</text>
+
+  <rect x="35" y="68" width="104" height="36" class="box"/>
+  <text x="87" y="90">fetch</text>
+
+  <rect x="35" y="135" width="104" height="36" class="box"/>
+  <text x="87" y="149">operand<tspan x="87" y="165">assembly</tspan></text>
+
+  <rect x="35" y="202" width="104" height="36" class="box"/>
+  <text x="87" y="224">execute</text>
+
+  <path d="M 87 37 L 87 67" class="line"/>
+  <path d="M 87 104 L 87 134" class="line"/>
+  <path d="M 87 171 L 87 201" class="line"/>
+
+  <path d="M 87 238 L 87 270 L 1 270 L 1 51 L 86 51" class="line"/>
+
+</svg>

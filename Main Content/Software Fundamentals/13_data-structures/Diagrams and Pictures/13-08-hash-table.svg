@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="Segoe UI, Arial, sans-serif">
+  <defs><marker id="m7c3aed" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/></marker><marker id="s7c3aed" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#7c3aed"/></marker><marker id="mb45309" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#b45309"/></marker><marker id="sb45309" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#b45309"/></marker><marker id="mb91c1c" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker><marker id="sb91c1c" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M10,0 L0,5 L10,10 z" fill="#b91c1c"/></marker></defs>
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="22" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Hash table: key → slot → value</text>
+  <text x="450.0" y="60" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Like a coat check: your ticket number says exactly which hook</text>
+  <rect x="30" y="110" width="120" height="46" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="90.0" y="138.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">key &quot;Ana&quot;</text>
+  <path d="M152,133 L266,255" fill="none" stroke="#b45309" stroke-width="2" marker-end="url(#mb45309)"/>
+  <rect x="30" y="190" width="120" height="46" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="90.0" y="218.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">key &quot;Ben&quot;</text>
+  <path d="M152,213 L266,255" fill="none" stroke="#b45309" stroke-width="2" marker-end="url(#mb45309)"/>
+  <rect x="30" y="270" width="120" height="46" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="90.0" y="298.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">key &quot;Cho&quot;</text>
+  <path d="M152,293 L266,255" fill="none" stroke="#b45309" stroke-width="2" marker-end="url(#mb45309)"/>
+  <rect x="30" y="350" width="120" height="46" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="90.0" y="378.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">key &quot;Dan&quot;</text>
+  <path d="M152,373 L266,255" fill="none" stroke="#b45309" stroke-width="2" marker-end="url(#mb45309)"/>
+  <rect x="270" y="185" width="170" height="140" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="355.0" y="241.5" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold"><tspan x="355.0" dy="0">hash</tspan><tspan x="355.0" dy="18.75">function</tspan><tspan x="355.0" dy="18.75">key → slot number</tspan></text>
+  <text x="532" y="107" font-size="14" fill="#6b7280" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">0</text>
+  <rect x="555" y="80" width="200" height="40" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="655.0" y="104.9" font-size="14" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Ben → 555-0199</text>
+  <text x="532" y="153" font-size="14" fill="#6b7280" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">1</text>
+  <rect x="555" y="126" width="200" height="40" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <text x="655.0" y="150.9" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">empty</text>
+  <text x="532" y="199" font-size="14" fill="#6b7280" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">2</text>
+  <rect x="555" y="172" width="200" height="40" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <text x="655.0" y="196.9" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">empty</text>
+  <text x="532" y="245" font-size="14" fill="#6b7280" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">3</text>
+  <rect x="555" y="218" width="200" height="40" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="655.0" y="242.9" font-size="14" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Ana → 555-0101</text>
+  <text x="532" y="291" font-size="14" fill="#6b7280" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">4</text>
+  <rect x="555" y="264" width="200" height="40" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <text x="655.0" y="288.9" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">empty</text>
+  <text x="532" y="337" font-size="14" fill="#6b7280" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">5</text>
+  <rect x="555" y="310" width="200" height="40" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="655.0" y="334.9" font-size="14" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Cho → 555-0142</text>
+  <text x="532" y="383" font-size="14" fill="#6b7280" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">6</text>
+  <rect x="555" y="356" width="200" height="40" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <text x="655.0" y="380.9" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">empty</text>
+  <text x="532" y="429" font-size="14" fill="#6b7280" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">7</text>
+  <rect x="555" y="402" width="200" height="40" rx="8" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <text x="655.0" y="426.9" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">empty</text>
+  <path d="M442,255 L551,100" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#m7c3aed)"/>
+  <path d="M442,255 L551,238" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#m7c3aed)"/>
+  <path d="M442,255 L551,330" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#m7c3aed)"/>
+  <rect x="775" y="310" width="105" height="40" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="827.5" y="334.55" font-size="13" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Dan → 555-…</text>
+  <path d="M757,330 L771,330" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#mb91c1c)"/>
+  <text x="450" y="470" font-size="14" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Collision: Cho and Dan both landed in slot 5, so slot 5 keeps a small list.</text>
+  <text x="450" y="496" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Looking up a key = run the hash function once, go straight to that slot. No searching!</text>
+</svg>
