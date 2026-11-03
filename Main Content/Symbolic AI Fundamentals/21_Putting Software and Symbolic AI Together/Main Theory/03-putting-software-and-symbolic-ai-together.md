@@ -1,4 +1,4 @@
-# Chapter 3 — Putting Software and Symbolic AI Together
+# Chapter 21 — Putting Software and Symbolic AI Together
 
 ## Learning goals
 By the end of this chapter, you should be able to:
@@ -11,7 +11,7 @@ By the end of this chapter, you should be able to:
 
 **Prerequisites:** Read Chapters 1 and 2. Basic familiarity with variables and conditional statements is helpful for the Python example, but not required for the Prolog introduction.
 
-## 3.1 What is the relationship between software and Symbolic AI?
+## 21.1 What is the relationship between software and Symbolic AI?
 
 **Software** is a set of programs and related instructions that tell a computer how to perform tasks. **Symbolic AI** is an approach for representing knowledge and reasoning with symbols, relationships and logical rules.
 
@@ -19,7 +19,7 @@ When combined, software provides the application structure and execution environ
 
 A conventional program may follow fixed instructions. A rule-based application can additionally inspect supplied facts, determine which rules apply and produce a result based on those rules. Not every program containing an `if` statement is a complete AI system; the Python example in this chapter is a small teaching model of rule execution.
 
-## 3.2 Common components of a rule-based application
+## 21.2 Common components of a rule-based application
 
 A simple application may contain these parts:
 
@@ -34,7 +34,7 @@ These components can be arranged differently in real software. An expert system 
 ![Architecture diagram connecting a user interface, application logic, reasoning component and output, with a knowledge base supplying rules.](../Diagrams%20and%20Pictures/ch3-01-software-symbolic-architecture.svg)
 
 
-## 3.3 Worked example: admission criteria checker
+## 21.3 Worked example: admission criteria checker
 
 Imagine a teaching application that checks two example admission criteria:
 
@@ -57,7 +57,7 @@ The result is: **Both specified criteria are satisfied.** This is not a real uni
 ![Worked flow diagram of an example GPA and English qualification checker.](../Diagrams%20and%20Pictures/ch3-02-admission-checker-flow.svg)
 
 
-## 3.4 Implementing rules in software
+## 21.4 Implementing rules in software
 
 ### Python: conditional rules
 
@@ -135,7 +135,7 @@ The capital letters `X`, `Y` and `Z` are variables. The operator `:-` separates 
 ![Illustration of conditional program flow from an input to different suggested outputs.](../Diagrams%20and%20Pictures/ch3-04-python-rule-based-flow.svg)
 
 
-## 3.5 Tools for learning and experimenting
+## 21.5 Tools for learning and experimenting
 
 - [SWI-Prolog documentation](https://www.swi-prolog.org/Documentation.html): the official reference and documentation for SWI-Prolog [8].
 - [Learn Prolog Now! — Facts, Rules and Queries](https://lpn.swi-prolog.org/lpnpage.php?pageid=lpn-htmlch1&pagetype=html): an introductory chapter explaining the three basic Prolog constructs [7].
@@ -143,7 +143,7 @@ The capital letters `X`, `Y` and `Z` are variables. The operator `:-` separates 
 
 **Suggested learner route:** Read the first section of *Learn Prolog Now!*, open SWISH, enter the family facts and rule above, then run the query. Predict the output before executing it. Change one fact and run the query again. Record what changed and why.
 
-## 3.6 Practical applications
+## 21.6 Practical applications
 
 Software that uses symbolic reasoning can support a range of tasks. Examples include:
 
@@ -155,7 +155,7 @@ Software that uses symbolic reasoning can support a range of tasks. Examples inc
 
 The examples show possible application patterns; they are not claims that every organization uses one identical architecture.
 
-## 3.7 Modern development: neuro-symbolic AI
+## 21.7 Modern development: neuro-symbolic AI
 
 Neural networks are effective for learning patterns from complex data, including images and audio. Symbolic systems are useful for explicit knowledge, relationships, constraints and logical reasoning. **Neuro-symbolic AI** investigates combinations of these approaches [1][8].
 
