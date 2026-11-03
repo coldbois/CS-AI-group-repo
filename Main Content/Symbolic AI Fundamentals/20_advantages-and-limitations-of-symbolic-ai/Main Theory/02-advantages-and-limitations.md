@@ -1,4 +1,4 @@
-# Chapter 2 — Advantages and Limitations of Symbolic AI
+# Chapter 20 — Advantages and Limitations of Symbolic AI
 
 ## Learning goals
 By the end of this chapter, you should be able to:
@@ -10,11 +10,11 @@ By the end of this chapter, you should be able to:
 
 **Prerequisites:** Read Chapter 1, especially the sections on facts, rules, knowledge bases and inference engines.
 
-## 2.1 Why examine both sides?
+## 20.1 Why examine both sides?
 
 Symbolic AI provides a structured way to represent knowledge and reason over it. This can be valuable, but it does not make a system automatically correct, flexible or suitable for every task. Its effectiveness depends on the problem, the quality of its knowledge base, the reasoning method and how well exceptions are handled.
 
-## 2.2 Advantages
+## 20.2 Advantages
 
 ### 1. Traceability and potential explainability
 
@@ -47,7 +47,7 @@ When policies change, developers can often revise a specific rule and test its e
 ![Five potential strengths of symbolic AI: traceability, consistency, structured knowledge, limited training-data need and direct rule control.](../Diagrams%20and%20Pictures/ch2-01-strengths-map.svg)
 
 
-## 2.3 Limitations
+## 20.3 Limitations
 
 ### 1. Knowledge acquisition and maintenance
 
@@ -74,7 +74,7 @@ As a rule base grows, developers may face overlapping rules, exceptions, contrad
 ![Five common symbolic-system challenges: knowledge capture, uncertainty, unstructured input, rule complexity and novel cases.](../Diagrams%20and%20Pictures/ch2-02-limitations-map.svg)
 
 
-## 2.4 Balancing advantages and limitations
+## 20.4 Balancing advantages and limitations
 
 | Potential strength | Related risk or limitation |
 |---|---|
@@ -87,7 +87,7 @@ As a rule base grows, developers may face overlapping rules, exceptions, contrad
 ![Balanced comparison of what rule-based symbolic AI provides and the costs that come with it.](../Diagrams%20and%20Pictures/ch2-03-advantages-limitations-balance.svg)
 
 
-## 2.5 Which approach fits the task?
+## 20.5 Which approach fits the task?
 
 Choose an approach based on the task's input, expected output, constraints and need for explanation. The following examples are starting points, not universal rules.
 
@@ -104,7 +104,7 @@ Choose an approach based on the task's input, expected output, constraints and n
 
 
 
-## 2.6 A closer look at uncertainty
+## 20.6 A closer look at uncertainty
 
 Consider a simplified rule:
 
@@ -118,7 +118,7 @@ This rule can consistently trigger a review when both inputs are true. It cannot
 ![Illustration showing symptoms entering a simple rule and the limitation that the rule cannot diagnose the underlying cause.](../Diagrams%20and%20Pictures/ch2-05-uncertainty-and-rules.svg)
 
 
-## 2.7 When is Symbolic AI a good choice?
+## 20.7 When is Symbolic AI a good choice?
 
 It may be a good choice when:
 
