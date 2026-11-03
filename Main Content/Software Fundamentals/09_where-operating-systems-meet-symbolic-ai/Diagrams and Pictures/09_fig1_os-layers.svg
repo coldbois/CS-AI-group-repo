@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460" font-family="Arial, Helvetica, sans-serif">
+  <title>Figure 1: Where the operating system sits</title>
+  <desc>Four stacked layers: the user, application software, the operating system with its main parts, and the hardware.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333333"/>
+    </marker>
+  </defs>
+  <rect width="800" height="460" fill="#ffffff"/>
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#111111">Figure 1: Where the operating system sits</text>
+
+  <rect x="150" y="50" width="500" height="50" rx="8" fill="#fff4d6" stroke="#b58900" stroke-width="2"/>
+  <text x="400" y="81" text-anchor="middle" font-size="16" fill="#111111">You (the user): click, type, tap, speak</text>
+
+  <line x1="400" y1="100" x2="400" y2="128" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="150" y="130" width="500" height="90" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="400" y="158" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Application software (runs in user mode)</text>
+  <text x="400" y="190" text-anchor="middle" font-size="14" fill="#111111">Web browser · Text editor · Game · Expert system program</text>
+
+  <line x1="400" y1="220" x2="400" y2="258" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="415" y="244" font-size="13" fill="#111111">system calls (requests for services)</text>
+
+  <rect x="150" y="260" width="500" height="100" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="400" y="282" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Operating system (the kernel runs in kernel mode)</text>
+  <rect x="169" y="295" width="108" height="50" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="223" y="315" text-anchor="middle" font-size="12" fill="#111111">Process</text>
+  <text x="223" y="331" text-anchor="middle" font-size="12" fill="#111111">management</text>
+  <rect x="287" y="295" width="108" height="50" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="341" y="315" text-anchor="middle" font-size="12" fill="#111111">Memory</text>
+  <text x="341" y="331" text-anchor="middle" font-size="12" fill="#111111">management</text>
+  <rect x="405" y="295" width="108" height="50" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="459" y="315" text-anchor="middle" font-size="12" fill="#111111">File system</text>
+  <text x="459" y="331" text-anchor="middle" font-size="12" fill="#111111">&amp; permissions</text>
+  <rect x="523" y="295" width="108" height="50" rx="6" fill="#ffffff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="577" y="315" text-anchor="middle" font-size="12" fill="#111111">Device</text>
+  <text x="577" y="331" text-anchor="middle" font-size="12" fill="#111111">drivers</text>
+
+  <line x1="400" y1="360" x2="400" y2="393" stroke="#333333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="415" y="381" font-size="13" fill="#111111">controls (through drivers)</text>
+
+  <rect x="150" y="395" width="500" height="50" rx="8" fill="#e5e7eb" stroke="#4b5563" stroke-width="2"/>
+  <text x="400" y="426" text-anchor="middle" font-size="14" fill="#111111">Hardware: CPU · RAM · disk · keyboard · screen · network</text>
+</svg>

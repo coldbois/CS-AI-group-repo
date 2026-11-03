@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 490" width="900" height="490" font-family="Arial, Helvetica, sans-serif">
+  <title>Figure 4: Where operating systems and symbolic AI meet</title>
+  <desc>Two overlapping circles. Left: operating system topics. Right: symbolic AI topics. Overlap: rule-based decisions and AI programs running as OS processes.</desc>
+  <rect width="900" height="490" fill="#ffffff"/>
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#111111">Figure 4: Where operating systems and symbolic AI meet</text>
+
+  <circle cx="340" cy="250" r="190" fill="#93c5fd" fill-opacity="0.55" stroke="#2563eb" stroke-width="2"/>
+  <circle cx="560" cy="250" r="190" fill="#fdba74" fill-opacity="0.55" stroke="#ea580c" stroke-width="2"/>
+
+  <text x="262" y="150" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Operating systems</text>
+  <text x="262" y="190" text-anchor="middle" font-size="14" fill="#111111">processes &amp; threads</text>
+  <text x="262" y="215" text-anchor="middle" font-size="14" fill="#111111">scheduling</text>
+  <text x="262" y="240" text-anchor="middle" font-size="14" fill="#111111">virtual memory</text>
+  <text x="262" y="265" text-anchor="middle" font-size="14" fill="#111111">files &amp; permissions</text>
+  <text x="262" y="290" text-anchor="middle" font-size="14" fill="#111111">device drivers</text>
+
+  <text x="640" y="150" text-anchor="middle" font-size="16" font-weight="bold" fill="#111111">Symbolic AI</text>
+  <text x="640" y="190" text-anchor="middle" font-size="14" fill="#111111">symbols &amp; knowledge</text>
+  <text x="640" y="215" text-anchor="middle" font-size="14" fill="#111111">facts and rules</text>
+  <text x="640" y="240" text-anchor="middle" font-size="14" fill="#111111">inference engine</text>
+  <text x="640" y="265" text-anchor="middle" font-size="14" fill="#111111">explanations</text>
+  <text x="640" y="290" text-anchor="middle" font-size="14" fill="#111111">expert systems</text>
+
+  <text x="450" y="172" text-anchor="middle" font-size="14" font-weight="bold" fill="#111111">Meeting points</text>
+  <text x="450" y="212" text-anchor="middle" font-size="13" fill="#111111">rule-based</text>
+  <text x="450" y="229" text-anchor="middle" font-size="13" fill="#111111">decisions</text>
+  <text x="450" y="246" text-anchor="middle" font-size="13" fill="#111111">(IF-THEN)</text>
+  <text x="450" y="282" text-anchor="middle" font-size="13" fill="#111111">AI programs</text>
+  <text x="450" y="299" text-anchor="middle" font-size="13" fill="#111111">run as OS</text>
+  <text x="450" y="316" text-anchor="middle" font-size="13" fill="#111111">processes</text>
+
+  <text x="450" y="470" text-anchor="middle" font-size="13" fill="#111111">The overlap shows connections between two different fields. It does not mean an OS is an AI.</text>
+</svg>
