@@ -85,7 +85,7 @@ The ready queue of an FCFS or Round Robin scheduler is naturally a **queue**, wh
 
 ![Figure 3.1: Task manager and running processes](https://www.lifewire.com/thmb/LGh8eIvqxll8X18cgRNPt6kEE8M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/task-manager-windows-11-980ae80d39694a14b75ddec1628d1924.png)
 
-*Figure 3.1. Task manager and running processes. Source: [Lifewire]([https://media.askvg.com/articles/images7/Task_Manager_Full_Mode_Windows_10.png](https://www.lifewire.com/thmb/LGh8eIvqxll8X18cgRNPt6kEE8M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/task-manager-windows-11-980ae80d39694a14b75ddec1628d1924.png)).*
+*Figure 3.1. Task manager and running processes. Source: [Lifewire](https://www.lifewire.com/thmb/LGh8eIvqxll8X18cgRNPt6kEE8M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/task-manager-windows-11-980ae80d39694a14b75ddec1628d1924.png).*
 
 ![Figure 3.2: Gantt charts](https://cdn.knowledgegate.ai/blog-assets/blog_asset_1784731060863_a91b5t.jpg)
 
