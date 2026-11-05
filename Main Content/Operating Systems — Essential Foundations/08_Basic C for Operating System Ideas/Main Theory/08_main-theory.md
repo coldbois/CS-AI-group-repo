@@ -109,10 +109,6 @@ Every chapter above is one department of the same company. The best way to see t
 
 In short: the hardware is the body, the operating system is the brain and nervous system that makes the body useful, and the applications are the things you actually do. Without the operating system, a computer is just a box of very expensive parts.
 
-## Practice: Check Yourself and Test Bank
-
-Work through these after reading the guide, using the worked examples as models. There are 26 questions: 8 application questions where you show your steps, 7 fill in the blanks and 11 true or false. Each question names its chapter. Check your work against the answers underneath.
-
 ## References
 
 The topics in this guide are standard operating systems content. Typical orders of magnitude for speeds and sizes come from these kinds of sources, so check any figure you reuse against them.
