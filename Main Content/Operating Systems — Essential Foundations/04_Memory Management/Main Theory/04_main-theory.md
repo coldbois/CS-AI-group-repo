@@ -100,9 +100,9 @@ Under malloc(), the C library keeps lists of free blocks and asks the OS for mor
 
 *Figure 4.2. Diagram of address translation. Source: [CSE 451 24sp](https://courses.cs.washington.edu/courses/cse451/24sp/lectures/figures/translation-single-level.png).*
 
-![Figure 4.3: Computer's memory usage](https://d1q3zw97enxzq2.cloudfront.net/images/How_to_check_memory_-.width-702.bgcolor-000.format-webp.webp)
+![Figure 4.3: Computer's memory usage](https://i2.wp.com/nextofwindows.com/wp-content/uploads/2021/01/2020-12-31-23_21_45-Windows-Task-Manager_-A-Complete-Walkthrough-600x618.png)
 
-*Figure 4.3. Computer's memory usage. Source: [Corsair](https://d1q3zw97enxzq2.cloudfront.net/images/How_to_check_memory_-.width-702.bgcolor-000.format-webp.webp).*
+*Figure 4.3. Computer's memory usage. Source: [Next of Windows](https://i2.wp.com/nextofwindows.com/wp-content/uploads/2021/01/2020-12-31-23_21_45-Windows-Task-Manager_-A-Complete-Walkthrough-600x618.png).*
 
 
 
