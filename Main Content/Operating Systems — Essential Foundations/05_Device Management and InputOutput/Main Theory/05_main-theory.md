@@ -58,17 +58,6 @@ A GPU is not better than a CPU at branch-heavy sequential logic; the CPU is bett
 
 On a discrete graphics card, input data is copied from RAM to VRAM over **PCIe**. The GPU has its own memory management unit and page tables, managed by the driver. The data path matters: a x16 PCIe Gen 4 link moves about 31 GB/s each way, while a high-end GPU's VRAM can move hundreds of GB/s or more, so copying data across PCIe is often the bottleneck and good programs minimise transfers. NPUs follow the same pattern (application, runtime, driver, queue, interrupt), although on many laptops and phones the NPU shares system memory with the CPU so no copy over PCIe is needed.
 
-### Pictures for Chapter 5
-
-> **Picture 5.1** (add your picture here): A photo of a GPU installed in a PCIe slot.  
-> Save it as `images/5-1.png`, then replace this note with `![Picture 5.1: A photo of a GPU installed in a PCIe slot](images/5-1.png)`.
-
-> **Picture 5.2** (add your picture here): A diagram comparing polling, interrupts and DMA.  
-> Save it as `images/5-2.png`, then replace this note with `![Picture 5.2: A diagram comparing polling, interrupts and DMA](images/5-2.png)`.
-
-> **Picture 5.3** (add your picture here): A screenshot of Device Manager showing a driver.  
-> Save it as `images/5-3.png`, then replace this note with `![Picture 5.3: A screenshot of Device Manager showing a driver](images/5-3.png)`.
-
 ## Visual References
 
 ![Figure 5.1: GPU installed in a PCIe slot](https://cdn.mos.cms.futurecdn.net/v2/t:0,l:321,cw:1538,ch:1154,q:80,w:1538/83JkEKofc4SQ7yh43s8Xog.png)
