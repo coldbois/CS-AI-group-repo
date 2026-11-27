@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" font-family="Segoe UI, Arial, sans-serif">
+  <defs></defs>
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="450.0" y="36" font-size="22" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">Worked example: the Undo button is a stack</text>
+  <text x="450.0" y="60" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Each action is pushed; Undo pops the newest</text>
+  <text x="145" y="92" font-size="15" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">1. type Hello</text>
+  <rect x="73" y="104" width="144" height="64" rx="6" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <rect x="73" y="104" width="144" height="16" rx="6" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+  <text x="145" y="152" font-size="14" fill="#1f2937" text-anchor="middle" font-family="Consolas, Menlo, monospace">Hello</text>
+  <line x1="85" y1="420" x2="205" y2="420" stroke="#6b7280" stroke-width="4"/>
+  <rect x="95" y="376" width="100" height="40" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="145.0" y="401.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Hello</text>
+  <text x="312" y="92" font-size="15" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">2. type big</text>
+  <rect x="240" y="104" width="144" height="64" rx="6" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <rect x="240" y="104" width="144" height="16" rx="6" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+  <text x="312" y="152" font-size="14" fill="#1f2937" text-anchor="middle" font-family="Consolas, Menlo, monospace">Hello big</text>
+  <line x1="252" y1="420" x2="372" y2="420" stroke="#6b7280" stroke-width="4"/>
+  <rect x="262" y="376" width="100" height="40" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="312.0" y="401.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Hello</text>
+  <rect x="262" y="328" width="100" height="40" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="312.0" y="353.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">big</text>
+  <text x="479" y="92" font-size="15" fill="#15803d" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">3. type world</text>
+  <rect x="407" y="104" width="144" height="64" rx="6" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <rect x="407" y="104" width="144" height="16" rx="6" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+  <text x="479" y="152" font-size="14" fill="#1f2937" text-anchor="middle" font-family="Consolas, Menlo, monospace">Hello big world</text>
+  <line x1="419" y1="420" x2="539" y2="420" stroke="#6b7280" stroke-width="4"/>
+  <rect x="429" y="376" width="100" height="40" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="479.0" y="401.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Hello</text>
+  <rect x="429" y="328" width="100" height="40" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="479.0" y="353.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">big</text>
+  <rect x="429" y="280" width="100" height="40" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="479.0" y="305.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">world</text>
+  <text x="646" y="92" font-size="15" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">4. Undo</text>
+  <rect x="574" y="104" width="144" height="64" rx="6" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <rect x="574" y="104" width="144" height="16" rx="6" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+  <text x="646" y="152" font-size="14" fill="#1f2937" text-anchor="middle" font-family="Consolas, Menlo, monospace">Hello big</text>
+  <line x1="586" y1="420" x2="706" y2="420" stroke="#6b7280" stroke-width="4"/>
+  <rect x="596" y="376" width="100" height="40" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="646.0" y="401.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Hello</text>
+  <rect x="596" y="328" width="100" height="40" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="646.0" y="353.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">big</text>
+  <rect x="596" y="190" width="100" height="36" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="646.0" y="212.2" font-size="12" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">popped: world</text>
+  <text x="813" y="92" font-size="15" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="bold">5. Undo</text>
+  <rect x="741" y="104" width="144" height="64" rx="6" fill="#ffffff" stroke="#6b7280" stroke-width="2"/>
+  <rect x="741" y="104" width="144" height="16" rx="6" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+  <text x="813" y="152" font-size="14" fill="#1f2937" text-anchor="middle" font-family="Consolas, Menlo, monospace">Hello</text>
+  <line x1="753" y1="420" x2="873" y2="420" stroke="#6b7280" stroke-width="4"/>
+  <rect x="763" y="376" width="100" height="40" rx="8" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+  <text x="813.0" y="401.25" font-size="15" fill="#1f2937" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Hello</text>
+  <rect x="763" y="190" width="100" height="36" rx="8" fill="#fee2e2" stroke="#b91c1c" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="813.0" y="212.2" font-size="12" fill="#b91c1c" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">popped: big</text>
+  <text x="20" y="300" font-size="13" fill="#6b7280" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-style="italic">stack</text>
+  <text x="20" y="140" font-size="13" fill="#6b7280" text-anchor="start" font-family="Segoe UI, Arial, sans-serif" font-style="italic">screen</text>
+  <text x="450" y="455" font-size="14" fill="#6b7280" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif">Undo always removes the most recent action, which is exactly what LIFO gives us.</text>
+</svg>

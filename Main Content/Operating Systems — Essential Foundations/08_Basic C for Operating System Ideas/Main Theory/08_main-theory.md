@@ -1,123 +1,136 @@
-## Chapter 8: C for Operating Systems: Seeing the Ideas in Code
+# 1.8 Basic C for Operating System Ideas
 
-Most operating systems are written in C. So far you have met the basics: `#include <stdio.h>`, `main`, variables, arithmetic and printf. The two short programs below use only those, and each one calculates an idea from the OS sections so you can check your hand calculations. Compile with `gcc demo.c -o demo` and run with `./demo`.
+![Dandroid saying hello](../../../assets/dandroid/dandroid-confident.png)
 
-### 8.1 Anatomy of a C program
+**Chapter 1 · Dandroid's Body** · Study Guide pp. 46–51 · Slide 18 · Test Bank T8, M8
 
-| **Line**              | **What it does**                                                                           |
-|-----------------------|--------------------------------------------------------------------------------------------|
-| `#include <stdio.h>` | Brings in the standard input/output library, which provides printf                         |
-| `int main(void) {`      | The starting point: the OS begins running your program here                                |
-| `int x = 5;`            | Declares a whole-number variable and gives it a value                                      |
-| `printf("...\n");`      | Prints text; `\n` starts a new line, `%d` prints an int, `%.2f` prints a decimal with two places |
-| `return 0;`             | Tells the OS the program finished successfully                                             |
+> **Mission.** Most of Dandroid's operating system is written in a language called C. Let's read Dandroid's very first words... and make Dandroid count.
 
-`#include <stdio.h>` brings in the standard input/output library so you can use printf.
+**You will learn to**
 
-### 8.2 Demo 1: Hello, operating system
+- read a tiny C program line by line
+- use variables and `printf`
+- explain how a running C program relates to the OS
 
-```c
-#include <stdio.h>
+**Key words:** C, main, printf, variable, int, comment
 
-int main(void) {
-    printf("Hello, operating system!\n");
-    return 0;
-}
-```
+---
 
-Output: `Hello, operating system!`. Behind this one line, printf calls the C library, which makes a write system call into the kernel, which sends the text to the screen (see The Operating System and Its Kernel).
+## Why C?
 
-### 8.3 Demo 2: FCFS waiting time
+C was created in the early 1970s by Dennis Ritchie at Bell Labs to write the Unix operating system. It is still the language of most OS kernels (Linux, much of Windows and macOS) and device drivers, because it is fast and lets programmers work close to the hardware. You don't need to become a C programmer for this module. You only need to *read* a few lines.
 
-Three jobs arrive at time 0 with bursts 5, 3 and 8. Under first come, first served, each job waits for all the jobs before it.
+## Dandroid says hello
+
+![Figure 1.8a](../Diagrams%20and%20Pictures/1-8_hello-world.png)
+
+*Figure 1.8a. Your first C program (Study Guide p. 47). The file is in [hello.c](../Learner%20Activity/code/hello.c).*
 
 ```c
 #include <stdio.h>
 
-int main(void) {
-    int burst1 = 5, burst2 = 3, burst3 = 8;
-
-    int wait1 = 0;
-    int wait2 = burst1;
-    int wait3 = burst1 + burst2;
-
-    double average = (wait1 + wait2 + wait3) / 3.0;
-
-    printf("Waiting times: %d %d %d\n", wait1, wait2, wait3);
-    printf("Average waiting time = %.2f\n", average);
+int main(void)
+{
+    printf("Hello, world!\n");
     return 0;
 }
 ```
 
-Output: `Waiting times: 0 5 8` and `Average waiting time = 4.33`. Dividing by 3.0 instead of 3 keeps the decimal part; with 3 the division would be done in whole numbers and drop the decimals.
+| Line | What it means |
+| --- | --- |
+| `#include <stdio.h>` | brings in the standard input/output tools, such as `printf` |
+| `int main(void)` | where the program starts. Every C program begins in `main` |
+| `printf("Hello, world!\n");` | prints the text. `\n` means "new line". The `;` ends the statement |
+| `return 0;` | tells the OS "I finished successfully" (any other number means an error) |
 
-In C, 10 / 4 when both numbers are ints is 2 (the decimal part is dropped) and 10 % 4 is 2 (the remainder).
+**Output:** `Hello, world!`
 
-### 8.4 What you will learn later in C
+## Variables: labelled boxes in memory
 
-As the course moves on, you will meet loops and if statements (to simulate a scheduler or count page faults step by step), arrays (for reference strings, page tables and ready queues), functions (to split a simulator into reusable parts), pointers (memory addresses, linked lists, how the heap works), malloc and free (dynamic allocation on the heap, see Memory), and fork and threads (creating processes and threads, see Running Programs). None of these are needed for the two demos above — they only use variables, arithmetic and printf.
+A **variable** is a named box in memory that holds a value. In C you must say what kind of value goes in the box. `int` means a whole number.
 
-## Visual References
+![Figure 1.8b](../Diagrams%20and%20Pictures/1-8_variables.png)
 
-![Figure 8.1: Overview of compiling with gcc](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKKIq3ZopoE7Fs-nUDFmQfhJ2EsQCnI4lOtoee64vgLJ9bnObf2Iu2Fs&s=10)
+*Figure 1.8b. Variables (Study Guide p. 48). The file is in [time_slice.c](../Learner%20Activity/code/time_slice.c).*
 
-*Figure 8.1. Overview of compiling with gcc. Source: [Medium](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMKKIq3ZopoE7Fs-nUDFmQfhJ2EsQCnI4lOtoee64vgLJ9bnObf2Iu2Fs&s=10).*
+```c
+// Give each process a short turn.
+int time_slice = 2;
+int processes = 3;
+int total_time = time_slice * processes;
+printf("Total time: %d\n", total_time);
+```
 
-![Figure 8.2: Programming using C and output](https://user-images.githubusercontent.com/47841385/104401862-0277f680-5590-11eb-8e94-ec0112d71569.png)
+- `//` starts a **comment**: a note for humans that the compiler ignores.
+- `int time_slice = 2;` makes a box called `time_slice` that holds 2.
+- `*` multiplies: 2 × 3 = 6.
+- `%d` is a gap where `printf` puts a whole number.
 
-*Figure 8.2. Programming using C and output. Source: [GitHub](https://user-images.githubusercontent.com/47841385/104401862-0277f680-5590-11eb-8e94-ec0112d71569.png ).*
+**Output:** `Total time: 6`
 
-![Figure 8.3: Diagram of the anatomy of a C program](https://www.startertutorials.com/blog/wp-content/uploads/2016/04/structure-of-cprogram.png)
+> **Bug alert.** This is just arithmetic, not a real scheduler. But it is a real **process**: while it runs, the OS gives it CPU time and memory, and its variables live in the memory the OS gave it ([1.3](../../03_Process%20and%20CPU%20Management/Main%20Theory/03_main-theory.md), [1.4](../../04_Memory%20Management/Main%20Theory/04_main-theory.md)).
 
-*Figure 8.3. Diagram of the anatomy of a C program. Source: [Starter Tutorials](https://www.startertutorials.com/blog/wp-content/uploads/2016/04/structure-of-cprogram.png).*
+## From source code to a running process
 
-## Bringing It Together: The Great Invention
+C is a **compiled** language. A program called a compiler (for example `gcc`) translates the whole file into machine code *before* it runs:
 
-Every chapter above is one department of the same company. The best way to see this is to follow one simple action from start to finish: **you press the power button and open a game.**
+```
+hello.c  →  compiler (gcc)  →  hello.exe  →  the OS loads it into memory as a process
+```
 
-### The story
+If the code breaks C's grammar, for example a missing `;`, the compiler refuses to build it and points to the line. This is a **syntax error**. With `gcc`, a missing `;` after `return 0` gives:
 
-1. **Motherboard and boot (Chapter 2).** You press the power button. Electricity flows across the motherboard, UEFI wakes up, POST checks the parts, and the bootloader loads the kernel into RAM.
-2. **The OS takes charge (Chapter 1).** The kernel starts in kernel mode, loads the drivers and shows the login screen.
-3. **Security (Chapter 7).** You log in. The OS checks your password and gives you the permissions of a normal user.
-4. **Files (Chapter 6).** You double-click the game. The file system finds the game's files on your SSD using their path.
-5. **Processes (Chapter 3).** The OS creates a process for the game. The scheduler gives it CPU time while your music app keeps running too.
-6. **Memory (Chapter 4).** The OS gives the game its own private part of RAM through virtual memory, and loads the needed pages from the SSD.
-7. **Devices (Chapter 5).** Drivers let the game talk to the GPU for graphics, the keyboard and mouse for control (using interrupts), and the speakers for sound. If the game uses AI for characters or upscaling, the NPU or GPU can help.
-8. **C (Chapter 8).** Much of the OS code that did all of this, and many drivers, are written in C. The game's own requests reach the kernel through system calls.
+```
+error: expected ';' before '}' token
+```
 
-### The bridge: one table
+The compiler only checks grammar. It can't tell whether your *idea* is right. A program that runs but gives the wrong answer has a **logic error**, and you will hunt one in [2.3](../../../Software%20Fundamentals/11_computer-programming/Main%20Theory/11_main-theory.md).
 
-| Chapter | Its job in one line | Without it |
-| --- | --- | --- |
-| 1. The OS and its kernel | The manager of the computer | Apps would fight over the hardware |
-| 2. Boot and the motherboard | Wakes everything up and connects the parts | The computer could not even start |
-| 3. Processes and the CPU | Shares the CPU fairly | Only one program could run |
-| 4. Memory | Gives each program safe space | Programs would overwrite each other |
-| 5. Devices and I/O | Lets software use hardware | Keyboard, screen and GPU would be useless |
-| 6. Files and storage | Saves and finds data | Everything would vanish at shutdown |
-| 7. Security | Protects users and data | Anyone or any program could damage the system |
-| 8. C | The language the OS is built from | The OS would be slower and harder to build |
+## Running the examples
 
-### Why the operating system is a great invention
+- **Online, no install:** paste the code into a free online C compiler such as OnlineGDB (onlinegdb.com/online_c_compiler) and press Run.
+- **On your own computer:** with `gcc` installed, run `gcc hello.c -o hello`, then `./hello` (or `hello.exe` on Windows).
+- **No internet:** predict the output on paper, then check against the answers in the activity.
 
-- **It hides complexity.** You click an icon, and the OS handles thousands of tiny steps across the CPU, memory, storage and devices.
-- **It shares resources fairly.** Many programs and many users can use one computer at the same time.
-- **It protects.** One crashed app does not take down the whole machine.
-- **It lets software be written once and run on many machines.** A programmer does not need to learn every keyboard, drive and screen in the world.
-- **It is the foundation for everything else.** Browsers, games, apps, AI tools and the internet all stand on top of an operating system.
+## Try it
 
-In short: the hardware is the body, the operating system is the brain and nervous system that makes the body useful, and the applications are the things you actually do. Without the operating system, a computer is just a box of very expensive parts.
+**Predict the Output** (15 min, solo): predict, run, change and break four tiny C programs. Instructions and answers: [08_learner-activity.md](../Learner%20Activity/08_learner-activity.md).
+
+## Going further (optional)
+
+- **Integer division.** `7 / 2` in C gives `3`, not `3.5`, because both numbers are `int` and the part after the point is thrown away. Write `7 / 2.0` to get `3.5`.
+- **A tiny scheduler calculation.** [fcfs_wait.c](../Learner%20Activity/code/fcfs_wait.c) uses a loop and an array to compute the FCFS waiting times from 1.3. It prints `P1 waits 0`, `P2 waits 8`, `P3 waits 10` and `Average wait: 6.0`, the same numbers as Figure 1.3b.
+- **The four stages of building.** `gcc` actually runs the preprocessor (handles `#include`), the compiler (C → assembly), the assembler (assembly → machine code) and the linker (joins your code with library code such as `printf`).
+
+## Check yourself
+
+1. Where does every C program start running?
+2. What does `int score = 10;` do?
+3. Why does memory protection matter for C programs?
+
+**Answers (try first, then peek)**
+1. In the `main` function.
+2. Creates a whole-number variable called `score` that holds 10.
+3. A buggy C program can misuse memory; the OS stops it from damaging other programs.
+
+
+More questions: [08_test-bank.md](../Test%20bank%20Question_Answer/08_test-bank.md)
+
+## Remember
+
+- C is used to build operating systems and drivers.
+- Variables are named boxes in memory.
+- A running C program is a process managed by the OS.
+
+## Watch and explore
+
+**OnlineGDB C compiler** (onlinegdb.com/online_c_compiler). Run every code example in this topic and change one value each time. It needs internet, and some school networks block it; predict on paper instead.
 
 ## References
 
-The topics in this guide are standard operating systems content. Typical orders of magnitude for speeds and sizes come from these kinds of sources, so check any figure you reuse against them.
+- Kernighan, B. W., & Ritchie, D. M. (1988). *The C Programming Language* (2nd ed.). Prentice Hall.
+- Ritchie, D. M. (1993). The development of the C language. *ACM SIGPLAN Notices, 28*(3), 201–208.
 
-1. Arpaci-Dusseau, R. H. and Arpaci-Dusseau, A. C. *Operating Systems: Three Easy Pieces*. Free online book at [ostep.org](https://pages.cs.wisc.edu/~remzi/OSTEP/). Covers processes, scheduling, virtual memory, paging, I/O and file systems (Chapters 1, 3, 4, 5, 6).
-2. Silberschatz, A., Galvin, P. B. and Gagne, G. *Operating System Concepts*, 10th edition. Wiley, 2018. Covers scheduling, deadlock, page replacement and file systems (Chapters 3, 4, 6).
-3. Tanenbaum, A. S. and Bos, H. *Modern Operating Systems*, 4th edition. Pearson, 2014. Covers kernel designs, memory management and security (Chapters 1, 4, 7).
-4. Kernighan, B. W. and Ritchie, D. M. *The C Programming Language*, 2nd edition. Prentice Hall, 1988. Covers the basic C used in the demos (Chapter 8).
-5. Hennessy, J. L. and Patterson, D. A. *Computer Architecture: A Quantitative Approach*. Morgan Kaufmann. Covers the memory hierarchy, caches and the TLB (Chapter 4).
-6. UEFI Forum. *UEFI Specification*. [uefi.org](https://uefi.org/specifications). Covers firmware, the boot process and Secure Boot (Chapters 2, 7).
-7. PCI-SIG and NVM Express. PCIe and NVMe specifications at [pcisig.com](https://pcisig.com) and [nvmexpress.org](https://nvmexpress.org). Cover buses, lanes and SSD queues (Chapters 2, 5, 6).
-8. The Linux kernel documentation at [kernel.org/doc](https://www.kernel.org/doc/html/latest/). Covers the Linux scheduler, memory management and device drivers (Chapters 3, 4, 5).
+---
+
+Previous: [1.7 Security](../../07_Security%20and%20Access%20Control/Main%20Theory/07_main-theory.md) · Next: [Chapter 2: Software](../../../Software%20Fundamentals/README.md) · Up: [Chapter 1 overview](../../README.md)

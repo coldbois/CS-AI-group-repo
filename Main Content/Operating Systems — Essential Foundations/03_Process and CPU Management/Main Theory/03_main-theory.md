@@ -1,97 +1,118 @@
-## Chapter 3: Running Programs: Processes and the CPU
+# 1.3 Process and CPU Management
 
-**Definition.** The OS decides which program runs on which CPU core, for how long, and what happens when programs compete for the same resource. This is what makes multitasking possible.
+![Dandroid juggling tasks](../../../assets/dandroid/dandroid-excited.png)
 
-**Analogy.** One chef (the CPU core) cooks for many tables (processes). The scheduler is the head waiter who decides which order to cook in; a context switch is the chef putting down one dish and picking up another.
+**Chapter 1 · Dandroid's Body** · Study Guide pp. 19–24 · Slides 11–12 · Test Bank T3, M3, O1
 
-### 3.1 Program, process and thread
+> **Mission.** Dandroid is playing music, downloading a game and chatting, all with one CPU core. How can one core do three things at once?
 
-| **Term** | **Meaning**                                                                           | **Shares with others?**                                                |
-|----------|---------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| Program  | A passive file on disk (for example an .exe or ELF binary)                            | Not running                                                            |
-| Process  | A running instance of a program, with its own address space, open files and resources | Nothing by default; processes are isolated                             |
-| Thread   | One path of execution inside a process, with its own stack and registers              | Shares code, heap and open files with the other threads of its process |
+**You will learn to**
 
-### 3.2 The process control block (PCB)
+- tell a program from a process
+- follow a process through its 5 states
+- compare FCFS and Round Robin scheduling
 
-The kernel keeps one PCB per process. It holds the process ID, state, program counter, saved CPU registers, scheduling information (priority), memory information (pointer to the page table), a list of open files and accounting data. The PCB is what lets the OS stop a process and resume it later exactly where it left off. The kernel structure that stores a process's saved state is the process control block (PCB).
+**Key words:** process, thread, scheduler, time slice, context switch, deadlock
 
-### 3.3 Process states
+---
 
-1. **New:** the process is being created.
+## Program vs process
 
-2. **Ready:** it can run and waits for a CPU core.
+A **program** is a recipe: instructions saved in a file. A **process** is someone actually cooking that recipe. It is the program *while it is running*, with its own memory and its own place in the instructions.
 
-3. **Running:** its instructions are executing on a core.
+- Open the same app twice and you get **two processes** from one program.
+- The OS keeps a record for every process, called the **process control block (PCB)**. It stores the process's state, where it was in the code, and which memory and files it is using.
+- A **thread** is a smaller worker inside a process. A media player might use one thread for sound and another for video.
 
-4. **Waiting (blocked):** it waits for an event such as a disk read to finish.
+## The life of a process
 
-5. **Terminated:** it has finished.
+![Figure 1.3a](../Diagrams%20and%20Pictures/1-3_process-states.png)
 
-Transitions: Ready to Running when the scheduler dispatches it; Running to Ready when its time slice ends (timer interrupt); Running to Waiting when it asks for I/O; Waiting to Ready when the I/O completes.
+*Figure 1.3a. The five states of a process (Study Guide p. 20).*
 
-### 3.4 Context switch
+| State | Meaning |
+| --- | --- |
+| New | the OS is setting the process up |
+| Ready | waiting in line for a turn on the CPU |
+| Running | using the CPU right now (only one process per core) |
+| Waiting | paused until something happens, such as a file loading or network data arriving (also called *blocked*) |
+| Terminated | finished; the OS cleans up its memory |
 
-A context switch saves the registers and program counter of the running process into its PCB, loads those of the next process, and switches the page table (on x86, by loading a new value into the CR3 register). A context switch does not cost nothing; it costs time and also cools the caches and TLB, so the new process finds them filled with the old one's data.
+Example: a download manager asks for network data and goes to **Waiting**. When the data arrives it goes back to **Ready**, not straight to Running, because another process may be using the CPU.
 
-### 3.5 Scheduling goals and algorithms
+> **Bug alert.** One core does *not* run several programs at the same instant. It switches between them so fast (many times a second) that it *looks* simultaneous. Saving one process's place and loading the next one is called a **context switch**.
 
-Schedulers are judged on CPU utilisation, throughput, turnaround time (finish minus arrival), waiting time (turnaround minus burst) and response time.
+## Who goes next? The scheduler
 
-| **Algorithm**                   | **Rule**                                                                   | **Strength**                  | **Weakness**                                                           |
-|---------------------------------|----------------------------------------------------------------------------|-------------------------------|------------------------------------------------------------------------|
-| FCFS (first come, first served) | Run in arrival order, no preemption                                        | Simple                        | Convoy effect: one long job delays all short ones                      |
-| SJF (shortest job first)        | Run the job with the shortest next burst                                   | Minimum average waiting time  | Needs burst lengths in advance; long jobs may starve                   |
-| Round Robin                     | Each process gets a fixed time quantum, then goes to the back of the queue | Fair, good response time      | Quantum too small wastes time on switches; too large behaves like FCFS |
-| Priority                        | Run the highest-priority process                                           | Important work goes first     | Starvation, fixed by aging (raising priority over time)                |
-| Multilevel feedback queue       | Several queues; processes move between them by behaviour                   | Adapts to short and long jobs | Complex to tune                                                        |
+The **scheduler** is the part of the OS that picks which Ready process runs next. We compare two simple methods with the same example used in the Study Guide and on slides 11–12.
 
-SJF gives the lowest average waiting time when all burst lengths are known and jobs arrive together. Real kernels are more elaborate: the Linux scheduler (CFS) always runs the task with the least virtual runtime, kept in a red-black tree.
+Three processes arrive together: **P1 needs 8, P2 needs 2, P3 needs 1** time unit.
 
-### 3.6 Worked example
+- **FCFS (First Come, First Served):** each process runs to the end, in arrival order.
+- **Round Robin (RR):** each process gets a short **time slice** (here 2 units), then goes to the back of the line.
 
-Three processes arrive at time 0 with CPU bursts P1 = 5, P2 = 3, P3 = 8 (time units). Waiting time = completion time minus burst time, since arrival is 0.
+![Figure 1.3b](../Diagrams%20and%20Pictures/1-3_fcfs-vs-rr.png)
 
-| **Algorithm**          | **Run order (Gantt chart)**                           | **Completion times** | **Waiting times** | **Average waiting time** |
-|------------------------|-------------------------------------------------------|----------------------|-------------------|--------------------------|
-| FCFS                   | P1 (0-5), P2 (5-8), P3 (8-16)                         | 5, 8, 16             | 0, 5, 8           | 4.33                     |
-| SJF                    | P2 (0-3), P1 (3-8), P3 (8-16)                         | 8, 3, 16             | 3, 0, 8           | 3.67                     |
-| Round Robin, quantum 4 | P1 (0-4), P2 (4-7), P3 (7-11), P1 (11-12), P3 (12-16) | 12, 7, 16            | 7, 4, 8           | 6.33                     |
+*Figure 1.3b. FCFS vs Round Robin (Study Guide p. 21).*
 
-SJF has the lowest average waiting time, as the theory says. Round Robin has the highest average waiting time here but gives every process its first slice early, which is why interactive systems use it. For three jobs arriving at time 0 with bursts 4, 2 and 6 under FCFS, waiting times are 0, 4 and 6, so the average is 10 / 3 = 3.33.
+### Worked example: average waiting time
 
-### 3.7 Multicore scheduling
+Waiting time = finish time − time needed.
 
-Each core has its own run queue, and the OS balances load between cores while trying to keep a thread on the same core (processor affinity) so its cache stays warm. On hybrid CPUs with performance and efficiency cores, the scheduler must also decide which kind of core suits each thread; Intel's Thread Director gives the OS hints for this. Simultaneous multithreading (hyper-threading) lets one core present two logical CPUs to the OS.
+| Process | Needs | FCFS finishes | FCFS wait | RR finishes | RR wait |
+| --- | --- | --- | --- | --- | --- |
+| P1 | 8 | 8 | 0 | 11 | 3 |
+| P2 | 2 | 10 | 8 | 4 | 2 |
+| P3 | 1 | 11 | 10 | 5 | 4 |
+| **Average** | | | **6.0** | | **3.0** |
 
-### 3.8 Synchronisation and deadlock
+With FCFS, tiny P3 waits 10 units behind big P1. With Round Robin everyone gets a short turn soon, so short jobs finish quickly and the computer *feels* responsive. That is why desktop systems use time slices.
 
-When threads share data, a **race condition** appears if the result depends on timing. A **mutex** or **semaphore** lets only one thread enter a **critical section** at a time.
+> **Dandroid's tip.** Round Robin is not always better. If all the jobs are the same length, RR can finish them later than FCFS, and every switch costs a little time. We ignored that cost in the example.
 
-A **deadlock** is a state where processes wait for each other forever, like four cars at a crossroads each waiting for the car on its right. It needs all four Coffman conditions at once:
+## Deadlock
 
-| **Condition**    | **Meaning**                                            | **How to break it**                              |
-|------------------|--------------------------------------------------------|--------------------------------------------------|
-| Mutual exclusion | A resource can be used by only one process at a time   | Use shareable resources where possible           |
-| Hold and wait    | A process holds one resource while waiting for another | Request all resources at once                    |
-| No preemption    | Resources cannot be taken away by force                | Allow the OS to take resources back              |
-| Circular wait    | A cycle of processes each waiting for the next         | Number the resources and always request in order |
+A **deadlock** happens when processes wait for each other forever. P1 holds the pen and wants the notebook. P2 holds the notebook and wants the pen. Neither lets go, so neither can write. Two common fixes: make one process give up what it holds, or make everyone grab resources in the same order (always the pen first).
 
-The rule "always lock resource A before resource B" removes the **circular wait** condition. Avoidance uses the Banker's algorithm (grant a request only if the system stays in a safe state). Detection and recovery builds a wait-for graph, finds cycles, and kills or rolls back a process.
+## Try it
 
-The ready queue of an FCFS or Round Robin scheduler is naturally a **queue**, which follows first in, first out (FIFO).
+**Process Musical Chairs** (20 min, 4–5 people): one chair is the CPU, volunteers are processes with clap counts, and you play an FCFS round, a Round Robin round and a deadlock bonus. Instructions and answers: [03_learner-activity.md](../Learner%20Activity/03_learner-activity.md).
 
-## Visual References
+## Going further (optional)
 
-![Figure 3.1: Task manager and running processes](https://www.lifewire.com/thmb/LGh8eIvqxll8X18cgRNPt6kEE8M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/task-manager-windows-11-980ae80d39694a14b75ddec1628d1924.png)
+- **Shortest Job First (SJF)** always runs the shortest waiting job next. With our example the order is P3, P2, P1, so the finishes are 1, 3 and 11 and the waits are 0, 1 and 3: an average of about 1.3, the lowest possible. The catch is that a real OS rarely knows in advance how long a job will take.
+- **Priority scheduling** gives important processes (for example, the one you are typing into) the CPU first. Low-priority jobs can *starve*, so real schedulers slowly raise the priority of jobs that have waited a long time.
+- **Four conditions for deadlock** (Coffman, 1971): mutual exclusion, hold and wait, no preemption, circular wait. Break any one and deadlock cannot happen.
 
-*Figure 3.1. Task manager and running processes. Source: [Lifewire](https://www.lifewire.com/thmb/LGh8eIvqxll8X18cgRNPt6kEE8M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/task-manager-windows-11-980ae80d39694a14b75ddec1628d1924.png).*
+## Check yourself
 
-![Figure 3.2: Gantt charts](https://cdn.knowledgegate.ai/blog-assets/blog_asset_1784731060863_a91b5t.jpg)
+1. What is the difference between a program and a process?
+2. A process is waiting for a file to load. Which state is it in?
+3. Why does Round Robin make a computer feel more responsive?
 
-*Figure 3.2. Gantt charts. Source: [Knowledge Gate](https://cdn.knowledgegate.ai/blog-assets/blog_asset_1784731060863_a91b5t.jpg).*
+**Answers (try first, then peek)**
+1. A program is stored instructions; a process is that program running.
+2. Waiting (also called blocked).
+3. Every process gets a short turn soon, so quick tasks don't wait behind long ones.
 
-![Figure 3.3: Process state diagram](https://static.wixstatic.com/media/97d138_721d4680c3ba40818c38df043ba92c86~mv2.png/v1/fill/w_872,h_356,al_c,q_85,enc_avif,quality_auto/97d138_721d4680c3ba40818c38df043ba92c86~mv2.png)
 
-*Figure 3.3. Process state diagram. Source: [Omegapy](https://static.wixstatic.com/media/97d138_721d4680c3ba40818c38df043ba92c86~mv2.png/v1/fill/w_872,h_356,al_c,q_85,enc_avif,quality_auto/97d138_721d4680c3ba40818c38df043ba92c86~mv2.png).*
+More questions: [03_test-bank.md](../Test%20bank%20Question_Answer/03_test-bank.md)
 
+## Remember
+
+- Process = a program in action.
+- New → Ready → Running → (Waiting) → Terminated.
+- The scheduler shares CPU time; deadlock means stuck waiting on each other.
+
+## Watch and explore
+
+**Little Man Computer** (online CPU simulator by Peter Higginson, peterhigginson.co.uk/lmc). Pick an example program, press STEP, and predict the next value in the accumulator before it appears. It is a simplified teaching CPU, not a real processor.
+
+## References
+
+- Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). *Operating System Concepts* (10th ed.). Wiley. Chapters 3 and 5.
+- Coffman, E. G., Elphick, M., & Shoshani, A. (1971). System deadlocks. *ACM Computing Surveys, 3*(2), 67–78.
+
+---
+
+Previous: [1.2 Boot Process](../../02_Boot%20Process%20and%20the%20Motherboard/Main%20Theory/02_main-theory.md) · Next: [1.4 Memory Management](../../04_Memory%20Management/Main%20Theory/04_main-theory.md) · Up: [Chapter 1 overview](../../README.md)

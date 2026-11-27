@@ -1,108 +1,115 @@
-## Chapter 4: Memory: Giving Every Program Its Own Space
+# 1.4 Memory Management
 
-**Definition.** Memory management is how the OS decides which process gets which part of RAM, keeps processes out of each other's memory, and makes a small amount of RAM look like a large private memory for every program.
+![Dandroid tired from too many tabs](../../../assets/dandroid/dandroid-tired.png)
 
-**Analogy.** RAM is a library reading room with limited desks. Each reader (process) believes they have a whole private library (virtual memory); the librarian (OS plus the MMU hardware) quietly maps their imaginary shelves to real desks and fetches books from the archive (disk) when needed.
+**Chapter 1 · Dandroid's Body** · Study Guide pp. 25–29 · Slide 13 · Test Bank T4, M4, O2
 
-### 4.1 The memory hierarchy
+> **Mission.** Dandroid opened 40 browser tabs and everything slowed to a crawl. Where did all the memory go?
 
-Faster memory is smaller and more expensive, so computers stack several levels. Figures are typical orders of magnitude.
+**You will learn to**
 
-| **Level**           | **Typical size**         | **Typical access time** |
-|---------------------|--------------------------|-------------------------|
-| Registers           | Bytes to a few KB        | Under 1 ns              |
-| L1 cache (per core) | 32–64 KB                 | About 1 ns              |
-| L2 cache (per core) | 256 KB–2 MB              | A few ns                |
-| L3 cache (shared)   | Several MB to tens of MB | 10–40 ns                |
-| DRAM (main memory)  | GBs                      | 60–100 ns               |
-| NVMe SSD            | Hundreds of GB to TB     | 10–100 microseconds     |
-| Hard disk           | TBs                      | 5–10 milliseconds       |
+- compare RAM and storage
+- explain virtual memory, pages and page faults
+- predict which page FIFO and LRU remove
 
-The hierarchy works because of **locality**: programs reuse data they just used (temporal locality) and data next to it (spatial locality). Caches therefore move data in cache lines of 64 bytes.
+**Key words:** RAM, address, virtual memory, page, page fault, swap
 
-### 4.2 From contiguous allocation to paging
+---
 
-Early systems gave each process one continuous block of RAM. That wastes space through **fragmentation**: internal (unused space inside a block) and external (free space split into pieces too small to use). Modern systems use **paging**: virtual memory is cut into fixed-size pages (usually 4 KB) and physical memory into frames of the same size, so any page can sit in any frame.
+## Desk vs bookshelf
 
-### 4.3 Address translation
+We use one picture for memory in every resource (guide, slides and Test Bank question O2):
 
-A virtual address is split into a page number and an offset. With 4 KB pages the offset is 12 bits. The **page table** maps each virtual page to a physical frame, and each entry also holds control bits: present, read/write, user/supervisor, accessed, dirty and no-execute. The **MMU** (memory management unit, part of the CPU) does the lookup in hardware on every memory access. Page tables are multi-level (4 levels on x86-64 with 48-bit addresses) so they do not waste memory on unused address ranges.
+| | **RAM = the desk** | **Storage = the bookshelf** |
+| --- | --- | --- |
+| Size | small | big |
+| Speed | very fast | slower |
+| Holds | what you are using right now | everything you keep |
+| Power off | **cleared** | kept |
+| Examples | 8 GB or 16 GB of RAM | SSD or hard drive (HDD) |
 
-To avoid a slow page-table walk on every access, the MMU keeps recent translations in the **TLB** (translation lookaside buffer). A TLB hit costs about one cycle; a TLB miss triggers a walk through the page-table levels in memory. A TLB miss only means the translation was not cached, so the MMU walks the page table and carries on; a page fault means the page is not in RAM, so the OS must load it from disk.
+The CPU can only work with what is on the desk. When you open an app, the OS fetches it from the bookshelf and puts it on the desk.
 
-**Worked example: translating an address.** A 32-bit system uses 4 KB pages. The program uses virtual address 0x00403A7C.
+Every byte of RAM has an **address**, a number like a house number, so the CPU can find it.
 
-1. Offset = the low 12 bits = 0xA7C.
+## Virtual memory and pages
 
-2. Page number = the address shifted right by 12 bits = 0x403.
+If every program used real RAM addresses directly, one program could read or overwrite another's memory. So the OS gives each program its own private, pretend set of addresses called **virtual memory**, and quietly maps them to real RAM.
 
-3. The page table says page 0x403 is stored in frame 0x1B2.
+To make the mapping manageable, memory is cut into equal blocks called **pages** (often 4 KB each). The space in real RAM that holds one page is called a **frame**. The OS keeps a **page table** for each program: a map that says "page 0 is in frame 5, page 1 is in frame 2..."
 
-4. Physical address = (0x1B2 shifted left by 12) combined with the offset = 0x1B2A7C.
+![Figure 1.4a](../Diagrams%20and%20Pictures/1-4_pages-to-frames.png)
 
-With 4096-byte pages, virtual address 8200 has page number 2 and offset 8 (8200 = 2 x 4096 + 8), so if page 2 is stored in frame 5, the physical address is 5 x 4096 + 8 = 20488.
+*Figure 1.4a. Pages map to frames; page 3 is out on the disk (Study Guide p. 26). Notice that the program's pages do not have to sit next to each other in real RAM.*
 
-**Worked example: effective access time.** With a TLB access of 1 ns, a memory access of 100 ns and a TLB hit ratio of 98%, a hit costs 1 + 100 = 101 ns and a miss costs 1 + 100 + 100 = 201 ns (one extra memory access for a single-level page table):
+- Need a page that isn't in RAM? That is a **page fault**. The OS fetches the page from storage, updates the page table and lets the program carry on.
+- RAM full? The OS moves pages that haven't been used for a while out to **swap space** on the drive. That frees a frame, but fetching those pages back later is slow.
 
-```text
-EAT = h(t_TLB + t_mem) + (1-h)(t_TLB + 2 x t_mem) = 0.98 x 101 + 0.02 x 201 = 103.0 ns
-```
+> **Bug alert.** A page fault is not a crash. It is normal and happens all the time. A program is only stopped if it tries to touch memory that isn't its own.
 
-With a 95% hit ratio, EAT = 0.95 x 101 + 0.05 x 201 = 106.0 ns.
+## Why 40 tabs make the laptop slow
 
-### 4.4 Virtual memory and page faults
+Each tab needs pages on the desk. With 40 tabs, the desk is full, so the OS keeps moving pages to the bookshelf and fetching them back. The drive light flashes and everything waits for storage, which is far slower than RAM. When a computer spends more time swapping than working, it is called **thrashing**.
 
-If the page table entry says the page is not present, the CPU raises a **page fault**. The OS finds the page on disk (swap space or the program file), picks a free frame (evicting another page if needed), loads the page, updates the page table and restarts the instruction. A page fault is not an error; it is how the OS loads memory lazily. If a system spends most of its time handling page faults instead of running code, it is **thrashing**; the fix is to give processes enough frames for their working set or to run fewer processes.
+What helps: close tabs and apps you aren't using, restart the browser, or add more RAM.
 
-### 4.5 Page replacement
+## Which page goes back to the shelf?
 
-When no frame is free, the OS must choose a victim page.
+When the desk is full and a new page is needed, the OS must pick a **victim** page to remove. Two simple policies:
 
-| **Algorithm** | **Rule**                                                | **Note**                                                                             |
-|---------------|---------------------------------------------------------|--------------------------------------------------------------------------------------|
-| FIFO          | Evict the page that has been in memory longest          | Simple; suffers Belady's anomaly                                                     |
-| LRU           | Evict the page unused for the longest time              | Close to optimal in practice; needs hardware help or approximation (clock algorithm) |
-| OPT (optimal) | Evict the page whose next use is farthest in the future | Impossible to implement; used as a benchmark                                         |
+- **FIFO (First In, First Out):** remove the page that has been in RAM the longest.
+- **LRU (Least Recently Used):** remove the page that hasn't been *used* for the longest time.
 
-**Worked example.** Reference string 2, 3, 2, 1, 5, 2, 4, 5, 3, 2, 5, 2 with 3 frames (12 references):
+### Worked example (3 frames, requests 1, 2, 3, 1, 4, 1, 5, 1)
 
-| **Algorithm** | **Page faults** | **Hits** |
-|---------------|-----------------|----------|
-| FIFO          | 9               | 3        |
-| LRU           | 7               | 5        |
-| OPT           | 6               | 6        |
+F = page fault, H = hit (already on the desk). The desk contents are shown after each request.
 
-**Belady's anomaly.** For FIFO and the reference string 1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5, giving the process 3 frames causes 9 faults but giving it 4 frames causes 10: more memory produced more faults. Giving FIFO more frames can increase its page faults; LRU and OPT never behave this way.
+| Request | 1 | 2 | 3 | 1 | 4 | 1 | 5 | 1 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **FIFO** | F [1] | F [1,2] | F [1,2,3] | H | F [2,3,4] | F [3,4,1] | F [4,1,5] | H |
+| **LRU** | F [1] | F [1,2] | F [1,2,3] | H | F [1,3,4] | H | F [1,4,5] | H |
 
-### 4.6 Stack vs heap
+FIFO makes **6** faults and LRU makes **5**. FIFO threw out page 1 just because it arrived first, even though it was used all the time. LRU kept it because it kept being used. Real operating systems use cleverer versions of LRU.
 
-The address space of a C process is laid out from low to high addresses as: code (text), initialised data, uninitialised data (BSS), **heap** (grows up), memory-mapped regions, **stack** (grows down) and, in the upper part, the kernel.
+## Try it
 
-| **Feature** | **Stack**                                                      | **Heap**                                          |
-|-------------|----------------------------------------------------------------|---------------------------------------------------|
-| Used for    | Local variables and function call frames                       | Memory requested at run time                      |
-| Allocation  | Automatic, when a function is entered and left                 | Manual in C: malloc() and free()                  |
-| Speed       | Very fast (move one pointer)                                   | Slower (allocator searches for a free block)      |
-| Size        | Fixed limit, often 8 MB on Linux; overflow crashes the program | Limited by available memory; can fragment or leak |
-| Also called | Static allocation, size fixed at compile time                  | Dynamic allocation, size decided at run time      |
+**Desk Tidy Challenge** (15 min, paper and 3 sticky notes): act out this exact example with FIFO and LRU and count your faults. Instructions and answers: [04_learner-activity.md](../Learner%20Activity/04_learner-activity.md).
 
-malloc() takes memory from the **heap**, while memory whose size is fixed at compile time, such as a local array, uses the **stack**.
+## Going further (optional)
 
-Under malloc(), the C library keeps lists of free blocks and asks the OS for more memory only when it runs out, using the brk system call for the main heap or mmap for large requests (above roughly 128 KB in glibc by default). The OS usually does not give physical frames until the program first touches the memory, which is why a large malloc can succeed instantly. When a process calls fork(), parent and child share frames marked copy-on-write, and a private copy is made only when one of them writes.
+- **Address translation.** With 4 KB pages (4096 bytes), virtual address 8200 is in page 8200 ÷ 4096 = 2 (whole number), at offset 8200 − 2 × 4096 = 8. If page 2 is in frame 7, the real address is 7 × 4096 + 8 = 28 680.
+- **The TLB.** Looking up the page table for every memory access would be slow, so the CPU keeps a small cache of recent translations called the translation lookaside buffer.
+- **Memory hierarchy.** Registers → CPU cache → RAM → SSD → hard drive: each level is bigger, cheaper per GB and slower than the one before.
 
-## Visual References
+## Check yourself
 
-![Figure 4.1: Visualisation of registers down to the hard disk](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY341W0E7hvsRMBz-OWBAPrl-IlJqv-aZiEev67QNXR6rc2pSKiCWs14Y&s=10)
+1. Why is RAM called temporary memory?
+2. What is a page fault?
+3. Your laptop slows down with many apps open and the drive is busy all the time. What is happening?
 
-*Figure 4.1. Visualisation of registers down to the hard disk. Source: [patch.update](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY341W0E7hvsRMBz-OWBAPrl-IlJqv-aZiEev67QNXR6rc2pSKiCWs14Y&s=10).*
-
-![Figure 4.2: Diagram of address translation](https://courses.cs.washington.edu/courses/cse451/24sp/lectures/figures/translation-single-level.png)
-
-*Figure 4.2. Diagram of address translation. Source: [CSE 451 24sp](https://courses.cs.washington.edu/courses/cse451/24sp/lectures/figures/translation-single-level.png).*
-
-![Figure 4.3: Computer's memory usage](https://i2.wp.com/nextofwindows.com/wp-content/uploads/2021/01/2020-12-31-23_21_45-Windows-Task-Manager_-A-Complete-Walkthrough-600x618.png)
-
-*Figure 4.3. Computer's memory usage. Source: [Next of Windows](https://i2.wp.com/nextofwindows.com/wp-content/uploads/2021/01/2020-12-31-23_21_45-Windows-Task-Manager_-A-Complete-Walkthrough-600x618.png).*
+**Answers (try first, then peek)**
+1. Its contents are lost when the power is off.
+2. A request for a page that isn't in RAM yet, so the OS loads it from storage.
+3. RAM is full, so the OS keeps swapping pages to and from the slower drive.
 
 
+More questions: [04_test-bank.md](../Test%20bank%20Question_Answer/04_test-bank.md)
 
+## Remember
+
+- RAM = fast desk; storage = big bookshelf.
+- Virtual memory gives each program its own protected addresses.
+- Page faults are normal; too much swapping is slow.
+
+## Watch and explore
+
+**Crash Course Computer Science #19: Memory & Storage** (PBS, YouTube). Shows how RAM and storage differ physically. Write down two differences between RAM and an SSD. There is some hardware detail; you only need the big picture.
+
+## References
+
+- Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). *Operating System Concepts* (10th ed.). Wiley. Chapters 9–10.
+- Denning, P. J. (1968). Thrashing: Its causes and prevention. *Proceedings of the AFIPS Fall Joint Computer Conference*, 915–922.
+
+---
+
+Previous: [1.3 Processes](../../03_Process%20and%20CPU%20Management/Main%20Theory/03_main-theory.md) · Next: [1.5 Device Management and I/O](../../05_Device%20Management%20and%20InputOutput/Main%20Theory/05_main-theory.md) · Up: [Chapter 1 overview](../../README.md)

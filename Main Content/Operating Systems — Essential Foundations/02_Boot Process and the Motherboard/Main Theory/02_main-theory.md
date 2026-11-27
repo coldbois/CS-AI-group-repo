@@ -1,70 +1,110 @@
-## Chapter 2: Starting Up: Boot and the Motherboard
+# 1.2 Boot Process and the Motherboard
 
-**Definition.** Booting is the sequence that takes a machine from power-off to a running OS. The motherboard is the circuit board that connects the CPU, memory, storage and expansion cards, and decides which buses carry data between them.
+![Dandroid waking up](../../../assets/dandroid/dandroid-sleepy.png)
 
-**Analogy.** Booting is opening a shop in the morning: the lights come on (power), the manager checks every room works (firmware self-test), picks up the keys (bootloader), and only then the staff (kernel and services) start serving customers.
+**Chapter 1 · Dandroid's Body** · Study Guide pp. 13–18 · Slides 8–10 · Test Bank T2, M2
 
-### 2.1 What is on the motherboard
+> **Mission.** Someone presses Dandroid's power button. The screen is black... then a logo... then the desktop. What happened in those 10 seconds?
 
-| **Part**                          | **Job**                                                                              |
-|-----------------------------------|--------------------------------------------------------------------------------------|
-| CPU socket                        | Holds the processor; modern CPUs include the memory controller and many PCIe lanes   |
-| Chipset (platform controller hub) | Provides extra PCIe lanes, SATA, USB and other I/O the CPU does not provide directly |
-| RAM slots                         | Connect DDR memory modules through the memory channels                               |
-| PCIe slots and M.2 slots          | Connect the GPU, NVMe SSDs, network cards and other add-in devices                   |
-| UEFI flash chip                   | Stores the firmware that runs first                                                  |
-| VRM (voltage regulators)          | Convert supply voltage to the exact voltages the CPU and RAM need                    |
-| CMOS battery                      | Keeps the clock and firmware settings when power is off                              |
+**You will learn to**
 
-### 2.2 Buses: how data moves
+- name the main parts on a motherboard
+- put the 7 steps of booting in order
+- use the steps to troubleshoot start-up problems
 
-| **Bus**                   | **Connects**                     | **Typical speed (approximate)**                                                                                            |
-|---------------------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Memory bus (DDR channels) | CPU and RAM                      | Tens of GB/s per system, depending on channels and DDR generation                                                          |
-| PCIe                      | CPU and GPU, NVMe SSD, NPU cards | About 1 GB/s per lane per direction on Gen 3, 2 GB/s on Gen 4, 4 GB/s on Gen 5; a x16 Gen 4 slot is about 31 GB/s each way |
-| SATA                      | Chipset and SATA drives          | 6 Gb/s link, about 550 MB/s in practice                                                                                    |
-| USB                       | Chipset and peripherals          | From 480 Mb/s (USB 2.0) to 40 Gb/s (USB4)                                                                                  |
+**Key words:** motherboard, CPU, RAM, UEFI / BIOS, POST, bootloader
 
-### 2.3 The boot sequence
+---
 
-1. **Power on.** The power supply signals that power is stable; the CPU starts executing from a fixed reset address that points into the firmware flash chip.
+## Meet the motherboard team
 
-2. **Firmware (UEFI) runs.** It performs the power-on self-test (POST), initialises and trains the RAM, and enumerates the devices on the PCIe bus.
+The **motherboard** is the main circuit board of the computer. Every other part plugs into it, and data travels between the parts along connections called **buses** (PCIe is the fast bus used by graphics cards and SSDs).
 
-3. **Boot device chosen.** UEFI follows the boot order and reads the EFI System Partition (a small FAT32 partition) to find a bootloader.
+![Figure 1.2a](../Diagrams%20and%20Pictures/1-2_motherboard-team.png)
 
-4. **Bootloader runs.** GRUB or Windows Boot Manager loads the kernel image (and on Linux an initial RAM file system) into memory and passes it boot parameters. The bootloader is the component that loads the kernel into memory.
+*Figure 1.2a. The motherboard team (Study Guide p. 14).*
 
-5. **Kernel initialises.** It sets up the CPU mode, page tables, interrupt handlers, the scheduler and the drivers, then mounts the root file system.
+A few things worth noticing:
 
-6. **First user process starts.** On Linux this is init or systemd (PID 1); services and then the login screen or desktop follow.
+- The **CPU** runs almost everything, including most of the OS's own work.
+- The **GPU** does many small calculations at the same time, which is perfect for graphics.
+- The **NPU** speeds up some AI tasks using little power. Not every computer has one.
+- **RAM** is fast but *volatile*: it forgets everything when the power goes off. That is why the OS has to be loaded again at every start-up.
+- The **firmware chip** holds **UEFI**, the very first program that runs. Older computers used **BIOS**, which did the same job, so you will often hear both names.
 
-### 2.4 BIOS vs UEFI
+## The boot sequence in 7 steps
 
-| **Feature**       | **Legacy BIOS**                             | **UEFI**                                                                                    |
-|-------------------|---------------------------------------------|---------------------------------------------------------------------------------------------|
-| CPU mode at start | 16-bit real mode                            | 32-bit or 64-bit                                                                            |
-| Partition scheme  | MBR: disks up to 2 TB, 4 primary partitions | GPT: disks beyond 2 TB, typically 128 partitions. UEFI supports GPT disks larger than 2 TB. |
-| Security          | None built in                               | Secure Boot checks the bootloader's digital signature                                       |
-| Interface         | Text menus                                  | Graphical menus, mouse support                                                              |
+**Booting** is everything that happens between pressing the power button and seeing the login screen.
 
-The chip on the motherboard that stores the firmware is the **UEFI flash chip**. Secure Boot matters because the firmware verifies the signature of the bootloader and kernel before running them, so malicious code cannot be slipped into the start of the boot chain.
+![Figure 1.2b](../Diagrams%20and%20Pictures/1-2_boot-7-steps.png)
 
-### 2.5 How the OS discovers hardware
+*Figure 1.2b. The boot sequence (Study Guide p. 15).*
 
-The kernel learns what hardware exists from tables handed over by the firmware (ACPI tables on PCs, a device tree on many ARM boards) and by scanning the PCIe bus. Every PCIe device exposes a vendor ID and a device ID in its configuration space, and the kernel matches those IDs to a driver.
+| Step | What happens | If it fails, you see... |
+| --- | --- | --- |
+| 1. Power on | Electricity reaches the motherboard and parts. | nothing at all |
+| 2. Firmware starts | UEFI runs from the firmware chip. | nothing, or the fans spin with no picture |
+| 3. POST check | The Power-On Self-Test checks key hardware (RAM, graphics, keyboard). | beeps or an error message |
+| 4. Find bootloader | UEFI looks on the drives for the small program that starts the OS. | "No bootable device" |
+| 5. Load kernel | The bootloader copies the kernel from the drive into RAM and hands over control. | the logo appears, then freezes or restarts |
+| 6. Start services | The kernel sets up memory, drivers and background services. | a freeze or error during the loading screen |
+| 7. Login screen | Ready. The desktop appears after you sign in. | (you made it) |
 
-## Visual References
+The teaching slides (slide 8) show a shorter 5-step version for class: *power on → UEFI checks the hardware → find the bootloader → load the kernel → login screen*. It is the same sequence with steps 2–3 and 5–6 grouped together.
 
-![Figure 2.1: Labelled photo of a motherboard](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWUY8GEa5CG2LhTBmKmhlV4CwJdTbL0qtg6HNwOnxtB5UlUSweXbNYvR81&s=10)
+> **Dandroid's tip.** Why do we need a bootloader at all? The OS is stored on the drive, but the CPU can only run instructions that are in memory. The bootloader's whole job is to copy the kernel into RAM and start it.
 
-*Figure 2.1. Labelled photo of a motherboard. Source: [Art of PC](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWUY8GEa5CG2LhTBmKmhlV4CwJdTbL0qtg6HNwOnxtB5UlUSweXbNYvR81&s=10).*
+> **Bug alert.** The OS does not start the computer. The firmware runs *first*, because at that moment the OS is still "asleep" on the drive.
 
-![Figure 2.2: UEFI settings showing the boot order](https://i0.wp.com/www.deskdecode.com/wp-content/uploads/2021/10/Boot-Sequence-Configuration-of-UEFI-BIOS.jpg?fit=957%2C537&ssl=1)
+## Worked example: which step failed?
 
-*Figure 2.2. UEFI settings showing the boot order. Source: [deskdecode](https://i0.wp.com/www.deskdecode.com/wp-content/uploads/2021/10/Boot-Sequence-Configuration-of-UEFI-BIOS.jpg?fit=957%2C537&ssl=1).*
+Dandroid's screen says **"No bootable device"** (this is the class question on slides 9–10).
 
-![Figure 2.3: Visualisation of boot steps](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Flow-diagram-computer-booting-sequences.svg/960px-Flow-diagram-computer-booting-sequences.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20241119163658)
+- Power is fine, because something is on the screen. So step 1 worked.
+- UEFI is running, because it printed the message. Steps 2 and 3 worked.
+- UEFI could not find a drive with a bootloader on it. **Step 4 failed.**
 
-*Figure 2.3. Visualisation of boot steps. Source: [Wikimedia Commons](https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Flow-diagram-computer-booting-sequences.svg/960px-Flow-diagram-computer-booting-sequences.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20241119163658).*
+Likely causes: the drive is unplugged or broken, or the boot files were deleted. The fix is to check the drive cables and the boot order in the UEFI settings, or reinstall the OS.
 
+## Try it
+
+**Human Boot Relay** (15 min, groups of 7): each person is one boot step, the group lines up in order, then diagnoses four broken computers. Instructions and answers: [02_learner-activity.md](../Learner%20Activity/02_learner-activity.md).
+
+## Going further (optional)
+
+- **BIOS vs UEFI.** BIOS is the older firmware from the 1980s. It reads the first sector of the disk (the MBR) and has a 2 TB disk limit. UEFI is newer: it understands GPT disks, can show a mouse-driven settings menu and supports Secure Boot.
+- **Secure Boot.** UEFI checks a digital signature on the bootloader before running it, and the bootloader checks the kernel. If someone has tampered with them, the chain stops. This protects against malware that tries to start before the OS.
+- **Bootloader names.** Windows uses Windows Boot Manager; most Linux computers use GRUB.
+
+## Check yourself
+
+1. What is the job of the bootloader?
+2. Which runs first: the kernel or UEFI?
+3. A computer beeps and shows nothing. Which step probably failed?
+
+**Answers (try first, then peek)**
+1. It loads the OS kernel from the drive into memory and starts it.
+2. UEFI (the firmware) runs first.
+3. POST, the hardware check (step 3).
+
+
+More questions: [02_test-bank.md](../Test%20bank%20Question_Answer/02_test-bank.md)
+
+## Remember
+
+- UEFI starts first and checks the hardware (POST).
+- The bootloader loads the kernel into RAM.
+- The kernel starts everything else.
+
+## Watch and explore
+
+Search for a short animated "how a computer boots" video. Pause at each step and name it from the 7-step list. Some videos say BIOS: it is the older name for UEFI.
+
+## References
+
+- Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). *Operating System Concepts* (10th ed.). Wiley. Section 2.9 (system boot).
+- UEFI Forum. (2022). *Unified Extensible Firmware Interface Specification*, version 2.10. https://uefi.org/specifications
+
+---
+
+Previous: [1.1 What an OS Is](../../01_What%20an%20Operating%20System%20Is/Main%20Theory/01_main-theory.md) · Next: [1.3 Process and CPU Management](../../03_Process%20and%20CPU%20Management/Main%20Theory/03_main-theory.md) · Up: [Chapter 1 overview](../../README.md)
