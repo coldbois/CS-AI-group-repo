@@ -24,4 +24,4 @@ For the content, I asked the AI for explanations, and for examples and activitie
 
 ## Evidence
 
-My 10 AI screenshots are saved in the same folder as the main content.
+My AI screenshots are saved in the same folder as the main content.
